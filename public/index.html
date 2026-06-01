@@ -126,10 +126,21 @@
     content: ""; position: absolute; inset: 0; opacity: .04; pointer-events: none;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
-  .mast-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 40px 24px 34px; }
-  
-  .mast-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
-  
+  .mast-inner { position: relative; max-width: 1200px; margin: 0 auto; padding: 26px 24px 30px; }
+  .mast-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
+  .mast-titles { flex: 1 1 360px; min-width: 0; }
+  .mast-row .hub-main-row { flex: 0 1 auto; justify-content: flex-end; }
+
+  /* Filter controls restyled for the dark masthead surface */
+  .mast .segment-tabs { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); }
+  .mast .segment-tab { color: #cfc9b6; }
+  .mast .segment-tab:hover { color: #fff; }
+  .mast .segment-tab.active { background: rgba(255,255,255,0.14); color: #fff; box-shadow: none; }
+  .mast .advanced-toggle-btn, .mast .sort-select { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.14); color: #f3eedf; }
+  .mast .advanced-toggle-btn:hover, .mast .sort-select:hover { border-color: var(--primary); color: #fff; }
+  .mast .advanced-toggle-btn.active { background: var(--primary-glow); border-color: var(--primary); color: #fff; }
+  .mast .sort-select option { color: #1a1a1a; background: #fff; }
+
   .kicker {
     font-family: var(--mono); font-size: 11px; letter-spacing: .25em; text-transform: uppercase;
     color: #cdbf94; display: flex; align-items: center; gap: 9px; flex-wrap: wrap;
@@ -138,6 +149,7 @@
   
   /* Theme Toggle */
   .theme-toggle-btn {
+    position: absolute; top: 22px; right: 24px;
     background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 50%; width: 40px; height: 40px; display: grid; place-items: center;
     cursor: pointer; color: #fff; transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -148,7 +160,7 @@
 
   h1 {
     font-family: var(--display); font-weight: 700; font-size: clamp(34px, 6vw, 56px); line-height: 1.02;
-    letter-spacing: -.02em; margin: 18px 0 10px; color: #fff;
+    letter-spacing: -.02em; margin: 0 0 10px; color: #fff;
   }
   h1 em { font-style: italic; color: #fccf65; font-weight: 500; }
   .sub { max-width: 660px; color: #cfc9b6; font-size: 16px; line-height: 1.45; }
@@ -253,7 +265,7 @@
   .calc-slider::-webkit-slider-thumb:hover { transform: scale(1.2); }
 
   /* ---------- Sticky Filtering Control Hub ---------- */
-  .control-hub-outer { max-width: 1200px; margin: 30px auto 0; padding: 0 24px; }
+  .control-hub-outer { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
   .control-hub {
     background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-md);
     box-shadow: var(--shadow-md); padding: 14px; display: flex; flex-direction: column; gap: 14px;
@@ -294,7 +306,8 @@
 
   /* Advanced Filter Section */
   .advanced-panel {
-    background: var(--bg-app); border-radius: var(--radius-sm); padding: 14px;
+    background: var(--bg-card); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);
+    border-radius: var(--radius-md); padding: 16px; margin-top: 16px;
     display: none; animation: slideDown 0.3s ease;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;
   }
@@ -717,12 +730,10 @@
     /* Mobile-only and desktop-only responsive overrides */
     .mobile-only { display: block !important; }
     .desktop-only { display: none !important; }
-    
-    /* Mobile Sticky Hub Compactness */
-    .control-hub {
-      padding: 10px 12px;
-      top: 10px;
-    }
+
+    /* Mobile masthead: stack controls below the title */
+    .mast-row { flex-direction: column; align-items: stretch; gap: 12px; }
+    .mast-titles { flex: 0 0 auto; }
     .hub-main-row {
       flex-wrap: nowrap;
       gap: 8px;
@@ -823,25 +834,21 @@
 
 <header class="mast">
   <div class="mast-inner">
-    <div class="mast-top">
-      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme">
-        <!-- Sun Icon -->
-        <svg id="sun-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" fill="none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-        <!-- Moon Icon -->
-        <svg id="moon-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" fill="none" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-      </button>
-    </div>
-    <h1>Forsyth County<br><em>Broadband Atlas</em></h1>
-    <p class="sub">Compare nine residential internet options across fiber, cable, 5G fixed wireless, and satellite. Filter live and compare options below.</p>
-  </div>
-</header>
+    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle light/dark theme">
+      <!-- Sun Icon -->
+      <svg id="sun-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" fill="none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      <!-- Moon Icon -->
+      <svg id="moon-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2" fill="none" style="display:none;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+    </button>
+    <div class="mast-row">
+      <div class="mast-titles">
+        <h1>Forsyth County<br><em>Broadband Atlas</em></h1>
+        <p class="sub">Compare nine residential internet options across fiber, cable, 5G fixed wireless, and satellite. Filter live and compare options below.</p>
+      </div>
 
+      <!-- Filter + sort controls, docked to the masthead right -->
+      <div class="hub-main-row">
 
-<!-- Sticky Control & Filter Bar -->
-<div class="control-hub-outer">
-  <div class="control-hub" id="sticky-control-hub">
-    <div class="hub-main-row">
-      
       <!-- Desktop-Only segment tabs -->
       <div class="segment-tabs desktop-only" id="category-segment-tabs-desktop">
         <button class="segment-tab active" data-cat="all"><span class="tab-dot" style="background:var(--primary)"></span>All Tech</button>
@@ -864,9 +871,14 @@
           <option value="upload-desc">Upload: High to Low</option>
         </select>
       </div>
+      </div>
     </div>
-    
-    <!-- Expanded Advanced Filters (Combined for mobile & desktop) -->
+  </div>
+</header>
+
+
+<!-- Expanded Advanced Filters panel (full-width, below masthead) -->
+<div class="control-hub-outer">
     <div class="advanced-panel" id="advanced-filters-panel">
       <!-- Mobile-Only segment tabs -->
       <div class="filter-section mobile-only">
@@ -913,7 +925,6 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
 
 <div class="wrap">
@@ -1828,16 +1839,6 @@ document.addEventListener('DOMContentLoaded', () => {
       rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
     if (!isInDialog) {
       compareDialog.close();
-    }
-  });
- 
-  // Sticky navbar shadow scrolling logic
-  const hub = document.getElementById('sticky-control-hub');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      hub.classList.add('scrolling');
-    } else {
-      hub.classList.remove('scrolling');
     }
   });
  
