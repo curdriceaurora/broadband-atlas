@@ -7,6 +7,8 @@
       "Bash(npm *)",
       "Bash(npx *)",
       "Bash(wrangler *)",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" *)",
+      "Bash(open *)",
       "Edit",
       "Write",
       "Read"

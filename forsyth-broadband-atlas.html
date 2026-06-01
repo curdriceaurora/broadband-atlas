@@ -378,9 +378,9 @@
   .avail {
     margin-top: 12px; display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 600;
     padding: 5px 12px; border-radius: 99px; border: 1px solid var(--border-color); background: var(--bg-app); color: var(--ink-soft);
-    align-self: flex-start;
+    align-self: flex-start; white-space: nowrap; max-width: 100%;
   }
-  .avail .ad { width: 8px; height: 8px; border-radius: 50%; }
+  .avail .ad { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
   .ad.high { background: var(--success); }
   .ad.mid { background: var(--warning); }
   .ad.cap { background: var(--fwa); }
@@ -1394,10 +1394,10 @@ function latencySpectrumGauge(latStr) {
     adCls = "cap";
   }
   
-  // If the input string is just 'Variable' or 'Low', we do not append it in parentheses
-  const detailStr = (latStr && clean !== 'variable' && clean !== 'low' && clean !== 'medium') 
-    ? ` (${latStr})` 
-    : '';
+  // Append only the concise numeric latency (e.g. "~600 ms"), dropping the
+  // redundant qualitative word so the pill stays on a single line.
+  const msMatch = latStr && latStr.match(/~?\d+(?:[–-]\d+)?\s*ms/);
+  const detailStr = msMatch ? ` (${msMatch[0].trim()})` : '';
     
   return `<span class="avail" style="margin-top: 10px;"><span class="ad ${adCls}"></span>${label}${detailStr}</span>`;
 }
