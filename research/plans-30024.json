@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "address": "6715 Fairstream Ct, Suwanee, GA 30024",
+    "area": "South Forsyth County",
+    "capture_method": "Claude for Chrome extension — run each provider's address checker for the address above, paste results back; values filled per plan",
+    "captured_at": null,
+    "status": "AWAITING_ADDRESS_CONFIRMED_DATA",
+    "field_guide": {
+      "address_available": "true | false | unknown — does the checker qualify this address for this plan?",
+      "base_rate": "sticker monthly price with NO discounts (number, USD)",
+      "autopay_rate": "monthly price WITH autopay/paperless discount only",
+      "mobile_bundle_rate": "monthly price WITH the provider's mobile-bundle discount (state the bundle in notes)",
+      "promo_rate": "intro price if different, with duration in promo_terms",
+      "down_mbps / up_mbps": "speeds the checker quotes for THIS address (null if generic)",
+      "data": "cap or 'unlimited'",
+      "contract": "e.g. 'none', '1 yr'",
+      "equipment_fee": "monthly gateway/router fee (0 if included)",
+      "hardware_cost": "one-time hardware (satellite/FWA) or rental note",
+      "perks": "array: gift cards, price-lock years, free equipment, streaming, ETF payoff, etc.",
+      "price_lock_years": "number or null",
+      "source_url": "the provider URL the checker landed on for this address"
+    }
+  },
+  "providers": [
+    {
+      "id": "attfiber", "name": "AT&T Fiber", "type": "fiber",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Internet 300", "down_mbps": 300, "up_mbps": 300, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Internet 500", "down_mbps": 500, "up_mbps": 500, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Internet 1 Gig", "down_mbps": 1000, "up_mbps": 1000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Internet 2 Gig", "down_mbps": 2000, "up_mbps": 2000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Internet 5 Gig", "down_mbps": 5000, "up_mbps": 5000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "tmofiber", "name": "T-Mobile Fiber (Lumos)", "type": "fiber",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Fiber 500", "down_mbps": 500, "up_mbps": 500, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Fiber 1 Gig", "down_mbps": 1000, "up_mbps": 1000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Fiber 2 Gig", "down_mbps": 2000, "up_mbps": 2000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "xfinity", "name": "Xfinity", "type": "cable",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Connect", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Connect More", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Fast", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Superfast", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Gigabit", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Gigabit Extra / x2", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "tmo5g", "name": "T-Mobile 5G Home Internet", "type": "fwa",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Rely Home Internet", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": [], "source_url": null},
+        {"plan_name": "Amplified Home Internet", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": [], "source_url": null},
+        {"plan_name": "All-In Home Internet", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "vz5g", "name": "Verizon 5G Home Internet", "type": "fwa",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "5G Home", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 3, "perks": [], "source_url": null},
+        {"plan_name": "5G Home Plus", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 4, "perks": [], "source_url": null},
+        {"plan_name": "5G Home Ultimate", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "attair", "name": "AT&T Internet Air", "type": "fwa",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Internet Air", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "starlink", "name": "Starlink", "type": "satellite",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Residential Lite", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": "none", "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Residential", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": "none", "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Residential MAX", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": null, "contract": "none", "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "viasat", "name": "Viasat", "type": "satellite",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Unleashed", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited (soft 850GB)", "contract": "none", "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": [], "source_url": null}
+      ]
+    },
+    {
+      "id": "hughesnet", "name": "HughesNet", "type": "satellite",
+      "address_available": "unknown",
+      "plans": [
+        {"plan_name": "Select", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "15 GB", "contract": null, "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Elite", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "50 GB", "contract": null, "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": [], "source_url": null},
+        {"plan_name": "Fusion 50", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "50 GB", "contract": null, "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": ["low-latency Fusion"], "source_url": null},
+        {"plan_name": "Fusion 100", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "100 GB", "contract": null, "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": ["low-latency Fusion"], "source_url": null},
+        {"plan_name": "Fusion 200", "down_mbps": null, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "200 GB", "contract": null, "equipment_fee": null, "hardware_cost": null, "price_lock_years": null, "perks": ["low-latency Fusion"], "source_url": null}
+      ]
+    }
+  ]
+}
