@@ -988,82 +988,82 @@
         <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
       <div class="note-card-content" style="display: flex; flex-direction: column; gap: 10px;">
-        <p>Wired figures represent advertised plan ceilings. Fixed-wireless and satellite figures reflect typical operational ranges that vary with signal strength, local congestion, and the time of day. Upload is where these technologies diverge most: symmetric fiber matches download speeds, whereas cable, 5G, and satellite are heavily download-weighted.</p>
+        <p>
+          Wired figures represent fixed plan ceilings. Fixed-wireless and satellite figures reflect typical operational ranges that fluctuate based on local network dynamics. Symmetric fiber stands out by offering matching download and upload speeds, whereas cable, 5G, and satellite are heavily download-weighted.
+        </p>
         
         <div class="fwa-methodology-rich" style="border-top: 1px dashed var(--border-soft); padding-top: 12px;">
-          <p style="font-weight: 500; font-size: 13.5px; margin-bottom: 10px;">
-            When it comes to 5G Fixed Wireless Access (FWA) Home Internet, mid-band spectrum—specifically <strong>C-Band</strong> (roughly 3.7 GHz - 3.98 GHz for Verizon and AT&T) and T-Mobile's neighboring 2.5 GHz mid-band—is the sweet spot. It provides the ideal balance between wide coverage and fast download (DL) speeds.
+          <p style="font-weight: 500; font-size: 13px; margin-bottom: 12px; color: var(--ink-soft);">
+            5G Fixed Wireless Access (FWA) Home Internet relies on mid-band frequencies—specifically **n77 C-band** (3.7 GHz - 3.98 GHz) and T-Mobile's neighboring **2.5 GHz mid-band**—to strike the optimal balance between signal reach and fast download speeds.
           </p>
           
-          <h5 style="font-size: 13.5px; font-family: var(--display); margin-bottom: 8px; font-weight: 600;">5G FWA Download Speed Operating Ranges:</h5>
-          
-          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
-            <div>
-              <strong style="color: var(--brand-tmo);">1. T-Mobile UC:</strong> 
-              <span style="font-family: var(--mono); font-weight: 700;">170 – 498 Mbps</span> (Premium Amplified/All-In) · 
-              <span style="font-family: var(--mono); font-weight: 700;">133 – 415 Mbps</span> (Baseline). 
-              <span style="color: var(--ink-faint);">Broadest mid-band footprint; mobile prioritization applies during congestion.</span>
-            </div>
-            
-            <div>
-              <strong style="color: var(--brand-verizon);">2. Verizon 5G Ultra Wideband:</strong> 
-              <span style="font-family: var(--mono); font-weight: 700;">100 – 300 Mbps</span> (C-band capped range).
-              <span style="color: var(--ink-faint);">Capacity-gated by tower; high stability and rarely throttles under 100 Mbps.</span>
-            </div>
-            
-            <div>
-              <strong style="color: var(--brand-att);">3. AT&T Internet Air:</strong> 
-              <span style="font-family: var(--mono); font-weight: 700;">90 – 300 Mbps</span> (Straightforward Tier).
-              <span style="color: var(--ink-faint);">Consistently stable fallback targeting DSL upgrades and rural/suburban pockets.</span>
-            </div>
-          </div>
-          
-          <table class="fwa-table" style="width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 12px; border: 1px solid var(--border-soft);">
+          <table class="fwa-table" style="width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 12px; border: 1px solid var(--border-soft); border-radius: var(--radius-sm); overflow: hidden;">
             <thead>
               <tr style="background: var(--bg-app); border-bottom: 1px solid var(--border-color); text-align: left;">
-                <th style="padding: 6px; font-weight: 600;">Carrier</th>
-                <th style="padding: 6px; font-weight: 600;">Plan Tier</th>
-                <th style="padding: 6px; font-weight: 600;">Official DL Range</th>
-                <th style="padding: 6px; font-weight: 600;">Average Real-World Sweet Spot</th>
+                <th style="padding: 8px 10px; font-weight: 600;">Carrier &amp; Plan Tier</th>
+                <th style="padding: 8px 10px; font-weight: 600;">Official DL Range</th>
+                <th style="padding: 8px 10px; font-weight: 600;">Real-World Sweet Spot</th>
+                <th style="padding: 8px 10px; font-weight: 600;">Local Spectrum &amp; Footprint Profile</th>
               </tr>
             </thead>
             <tbody>
               <tr style="border-bottom: 1px solid var(--border-soft);">
-                <td style="padding: 6px; font-weight: 700; color: var(--brand-tmo);" rowspan="2">T-Mobile</td>
-                <td style="padding: 6px;">Rely (Baseline)</td>
-                <td style="padding: 6px; font-family: var(--mono);">133 – 415 Mbps</td>
-                <td style="padding: 6px;">~150 – 250 Mbps</td>
+                <td style="padding: 8px 10px;">
+                  <strong style="color: var(--brand-tmo);">T-Mobile Rely</strong><br>
+                  <span style="font-size: 10.5px; color: var(--ink-faint);">Baseline FWA</span>
+                </td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600;">133 – 415 Mbps</td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600; color: var(--primary);">~150 – 250 Mbps</td>
+                <td style="padding: 8px 10px; color: var(--ink-soft);">Broadest 2.5 GHz mid-band footprint; mobile prioritization applies during congestion.</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-soft);">
-                <td style="padding: 6px;">Amplified / All-In</td>
-                <td style="padding: 6px; font-family: var(--mono);">170 – 498 Mbps</td>
-                <td style="padding: 6px;">~200 – 350 Mbps</td>
+                <td style="padding: 8px 10px;">
+                  <strong style="color: var(--brand-tmo);">T-Mobile Amplified / All-In</strong><br>
+                  <span style="font-size: 10.5px; color: var(--ink-faint);">Premium FWA</span>
+                </td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600;">170 – 498 Mbps</td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600; color: var(--primary);">~200 – 350 Mbps</td>
+                <td style="padding: 8px 10px; color: var(--ink-soft);">Utilizes Wi-Fi 7 gateway; premium capacity priority sectors.</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-soft);">
-                <td style="padding: 6px; font-weight: 700; color: var(--brand-verizon);" rowspan="2">Verizon</td>
-                <td style="padding: 6px;">5G Home (Standard)</td>
-                <td style="padding: 6px; font-family: var(--mono);">100 – 300 Mbps</td>
-                <td style="padding: 6px;">~120 – 200 Mbps</td>
+                <td style="padding: 8px 10px;">
+                  <strong style="color: var(--brand-verizon);">Verizon 5G Home</strong><br>
+                  <span style="font-size: 10.5px; color: var(--ink-faint);">Standard FWA</span>
+                </td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600;">100 – 300 Mbps</td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600; color: var(--primary);">~120 – 200 Mbps</td>
+                <td style="padding: 8px 10px; color: var(--ink-soft);">n77 C-band mid-band; strict capacity-gating provides high connection stability.</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-soft);">
-                <td style="padding: 6px;">Home Plus / Ultimate</td>
-                <td style="padding: 6px; font-family: var(--mono);">100 – 300 Mbps</td>
-                <td style="padding: 6px;">~150 – 250 Mbps</td>
+                <td style="padding: 8px 10px;">
+                  <strong style="color: var(--brand-verizon);">Verizon Home Plus / Ultimate</strong><br>
+                  <span style="font-size: 10.5px; color: var(--ink-faint);">Premium FWA</span>
+                </td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600;">100 – 300 Mbps</td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600; color: var(--primary);">~150 – 250 Mbps</td>
+                <td style="padding: 8px 10px; color: var(--ink-soft);">Gated by Forsyth's complete mmWave absence; capped to C-band n77 spectrum.</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-soft);">
-                <td style="padding: 6px; font-weight: 700; color: var(--brand-att);">AT&T</td>
-                <td style="padding: 6px;">Internet Air</td>
-                <td style="padding: 6px; font-family: var(--mono);">90 – 300 Mbps</td>
-                <td style="padding: 6px;">~150 – 220 Mbps</td>
+                <td style="padding: 8px 10px;">
+                  <strong style="color: var(--brand-att);">AT&amp;T Internet Air</strong><br>
+                  <span style="font-size: 10.5px; color: var(--ink-faint);">Standard FWA</span>
+                </td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600;">90 – 300 Mbps</td>
+                <td style="padding: 8px 10px; font-family: var(--mono); font-weight: 600; color: var(--primary);">~150 – 220 Mbps</td>
+                <td style="padding: 8px 10px; color: var(--ink-soft);">n77 mid-band spectrum; stable DSL upgrade fallback.</td>
               </tr>
             </tbody>
           </table>
           
-          <p style="font-size: 11.5px; font-style: italic; color: var(--ink-faint); margin-top: 10px; line-height: 1.38;">
-            <strong>Why do these ranges vary so much?</strong> Distance from tower, building penetration (C-band struggles with concrete/brick), and mobile prioritization during high-demand hours shape home speeds.
-          </p>
-          <p style="font-size: 11.5px; font-style: italic; color: var(--ink-faint); margin-top: 10px; line-height: 1.38;">
-            <strong>Exclusion of mmWave in Forsyth:</strong> Forsyth County does not have millimeter wave (mmWave) coverage for 5G FWA. Consequently, even though higher rate plans are advertised nationally, Verizon FWA is realistically capped to standard C-band limits (~300 Mbps) with an operating range of 100–300 Mbps.
+          <div style="background: rgba(252, 207, 101, 0.05); border-left: 4px solid #fccf65; padding: 12px 16px; border-radius: var(--radius-sm); font-size: 12px; line-height: 1.5; margin-top: 14px; color: var(--ink-soft);">
+            <strong>⚠️ Local Spectrum Constraint (No mmWave in Forsyth):</strong> Forsyth County lacks high-frequency millimeter wave (mmWave) 5G coverage entirely. Consequently, even though Verizon nationally advertises gigabit speed FWA plans, all local FWA connections are strictly gated by standard mid-band C-band spectrum (~300 Mbps physical ceiling), yielding a realistic operating ceiling of 100–300 Mbps.
+          </div>
+          
+          <p style="font-size: 11.5px; line-height: 1.5; color: var(--ink-soft); margin-top: 12px; border-top: 1px dashed var(--border-soft); padding-top: 10px;">
+            <strong>Why do wireless speeds fluctuate?</strong> Speeds are highly dynamic and shaped by three core factors:
+            (1) <em>Tower Proximity</em> (distance dramatically scales signal strength down),
+            (2) <em>Obstacles</em> (mid-band C-band struggles to penetrate concrete, brick, and heavy seasonal tree foliage), and
+            (3) <em>Tower Prioritization</em> (cellular mobile phone traffic is given priority bandwidth over FWA packages during peak-load hours).
           </p>
         </div>
       </div>
