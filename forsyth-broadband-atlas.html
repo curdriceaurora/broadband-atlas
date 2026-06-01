@@ -968,12 +968,79 @@
   </div>
   
   <div class="footer-notes-grid">
-    <details class="note-card" open>
+    <details class="note-card speed-methodology" open>
       <summary>
-        <h4>⚡ Speed Methodology</h4>
+        <h4>⚡ Speed Methodology &amp; FWA Ranges</h4>
         <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
-      <p>Wired figures represent advertised plan ceilings. Fixed-wireless and satellite figures reflect typical operational ranges that vary with signal strength, local congestion, and the time of day. Upload is where these technologies diverge most: symmetric fiber matches download speeds, whereas cable, 5G, and satellite are heavily download-weighted.</p>
+      <div class="note-card-content" style="display: flex; flex-direction: column; gap: 10px;">
+        <p>Wired figures represent advertised plan ceilings. Fixed-wireless and satellite figures reflect typical operational ranges that vary with signal strength, local congestion, and the time of day. Upload is where these technologies diverge most: symmetric fiber matches download speeds, whereas cable, 5G, and satellite are heavily download-weighted.</p>
+        
+        <div class="fwa-methodology-rich" style="border-top: 1px dashed var(--border-soft); padding-top: 12px;">
+          <p style="font-weight: 500; font-size: 13.5px; margin-bottom: 10px;">
+            When it comes to 5G Fixed Wireless Access (FWA) Home Internet, mid-band spectrum—specifically <strong>C-Band</strong> (roughly 3.7 GHz - 3.98 GHz for Verizon and AT&T) and T-Mobile's neighboring 2.5 GHz mid-band—is the sweet spot. It provides the ideal balance between wide coverage and fast download (DL) speeds.
+          </p>
+          
+          <h5 style="font-size: 13.5px; font-family: var(--display); margin-bottom: 8px; font-weight: 600;">5G FWA Download Speed Operating Ranges:</h5>
+          
+          <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
+            <div>
+              <strong style="color: var(--brand-tmo);">1. T-Mobile UC:</strong> 
+              <span style="font-family: var(--mono); font-weight: 700;">170 – 498 Mbps</span> (Premium Amplified/All-In) · 
+              <span style="font-family: var(--mono); font-weight: 700;">133 – 415 Mbps</span> (Baseline). 
+              <span style="color: var(--ink-faint);">Broadest mid-band footprint; mobile prioritization applies during congestion.</span>
+            </div>
+            
+            <div>
+              <strong style="color: var(--brand-verizon);">2. Verizon 5G Ultra Wideband:</strong> 
+              <span style="font-family: var(--mono); font-weight: 700;">300 – 1,000 Mbps</span> (Home Plus; C-band pure operates heavily at <span style="font-family: var(--mono); font-weight: 700;">300 – 500 Mbps</span>) · 
+              <span style="font-family: var(--mono); font-weight: 700;">100 – 300 Mbps</span> (Home Base).
+              <span style="color: var(--ink-faint);">Capacity-gated by tower; high stability and rarely throttles under 100 Mbps.</span>
+            </div>
+            
+            <div>
+              <strong style="color: var(--brand-att);">3. AT&T Internet Air:</strong> 
+              <span style="font-family: var(--mono); font-weight: 700;">90 – 300 Mbps</span> (Straightforward Tier).
+              <span style="color: var(--ink-faint);">Consistently stable fallback targeting DSL upgrades and rural/suburban pockets.</span>
+            </div>
+          </div>
+          
+          <table class="fwa-table" style="width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 12px; border: 1px solid var(--border-soft);">
+            <thead>
+              <tr style="background: var(--bg-app); border-bottom: 1px solid var(--border-color); text-align: left;">
+                <th style="padding: 6px; font-weight: 600;">Carrier</th>
+                <th style="padding: 6px; font-weight: 600;">Plan Tier</th>
+                <th style="padding: 6px; font-weight: 600;">Official DL Range</th>
+                <th style="padding: 6px; font-weight: 600;">Average Real-World Sweet Spot</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-soft);">
+                <td style="padding: 6px; font-weight: 700; color: var(--brand-tmo);">T-Mobile</td>
+                <td style="padding: 6px;">All-In / Amplified</td>
+                <td style="padding: 6px; font-family: var(--mono);">170 – 498 Mbps</td>
+                <td style="padding: 6px;">~200 – 350 Mbps</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-soft);">
+                <td style="padding: 6px; font-weight: 700; color: var(--brand-verizon);">Verizon</td>
+                <td style="padding: 6px;">5G Home Plus</td>
+                <td style="padding: 6px; font-family: var(--mono);">300 – 1,000 Mbps</td>
+                <td style="padding: 6px;">~300 – 450 Mbps</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border-soft);">
+                <td style="padding: 6px; font-weight: 700; color: var(--brand-att);">AT&T</td>
+                <td style="padding: 6px;">Internet Air</td>
+                <td style="padding: 6px; font-family: var(--mono);">90 – 300 Mbps</td>
+                <td style="padding: 6px;">~150 – 220 Mbps</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <p style="font-size: 11.5px; font-style: italic; color: var(--ink-faint); margin-top: 10px; line-height: 1.38;">
+            <strong>Why do these ranges vary so much?</strong> Distance from tower, building penetration (C-band struggles with concrete/brick), and mobile prioritization during high-demand hours shape home speeds.
+          </p>
+        </div>
+      </div>
     </details>
     
     <details class="note-card" open>
@@ -1070,16 +1137,16 @@ const P = [
     tech:'mid-band n41 (2.5 GHz)',
     gw:'5G gateway (Wi-Fi 7 on Amplified/All-In) · self-install (~15 min)',
     avail:'Wireless · ≈85% mid-band coverage', adCls:'cap',
-    downL:'498 Mbps', upL:'55 Mbps', sym:false, lat:'30–45 ms typical',
+    downL:'133 – 498 Mbps', upL:'55 Mbps', sym:false, lat:'30–45 ms typical',
     cap:'Unlimited (prioritized >1.2 TB)', capFree:true, equip:'Included', contract:'No contract',
     priceNum:'$35', priceSuf:'– $70 /mo',
     verdict:'BEST RENTER & BACKUP OPTION',
     tiers:[
-      {n:'Rely',note:'$50, or $35 with a T-Mobile line · 133–415 Mbps',p:'$50'},
-      {n:'Amplified',note:'Wi-Fi 7 gateway · ~30% faster · 24/7 support',p:'$60'},
-      {n:'All-In',note:'+ Hulu & Paramount+ · mesh · hardware refresh',p:'$70'}
+      {n:'Rely',note:'$50, or $35 with a T-Mobile line · 133–415 Mbps baseline range',p:'$50'},
+      {n:'Amplified',note:'Wi-Fi 7 gateway · ~30% faster · Typical 170–498 Mbps · 24/7 support',p:'$60'},
+      {n:'All-In',note:'+ Hulu & Paramount+ · Typical 170–498 Mbps · mesh extender · hardware refresh',p:'$70'}
     ],
-    note:'Best-rated of the 5G options and dead simple to set up. Typical downloads 133–498 Mbps, uploads 12–55 Mbps, both swinging with tower load. 5-year price lock, no equipment fee, 15-day trial. Sold only where the sector has spare capacity.',
+    note:'Best-rated of the 5G options and dead simple to set up. Typical download range is 170–498 Mbps on Premium tiers and 133–415 Mbps on Standard tiers, uploads 12–55 Mbps, both swinging with tower load. 5-year price lock, no equipment fee, 15-day trial. Sold only where the sector has spare capacity.',
     best:['No-install / renters','Budget w/ T-Mobile line','Backup line']
   },
   {
@@ -1088,16 +1155,16 @@ const P = [
     tech:'mid-band n77 C-band (3.7 GHz)',
     gw:'5G receiver/gateway · some installs need external antenna',
     avail:'Wireless · ≈60% mid-band coverage', adCls:'cap',
-    downL:'500 Mbps', upL:'50 Mbps', sym:false, lat:'35–50 ms typical',
+    downL:'100 – 1,000 Mbps', upL:'50 Mbps', sym:false, lat:'35–50 ms typical',
     cap:'Unlimited', capFree:true, equip:'Included', contract:'No contract',
     priceNum:'$35', priceSuf:'– $75 /mo',
     verdict:'BEST VALUE 5G FOR MOBILE USERS',
     tiers:[
-      {n:'5G Home',note:'$50, or $35 with select Verizon mobile · up to 300 Mbps · 3-yr price lock',p:'$50'},
-      {n:'5G Home Plus',note:'$60, or $45 with mobile · up to 500 Mbps on a strong C-band signal · 4-yr lock · Netflix & Max (ads) first year',p:'$60'},
-      {n:'5G Home Ultimate',note:'$75, or $60 with mobile · advertised up to 1 Gbps, but that needs mmWave — not present in Forsyth · 5-yr lock',p:'$75'}
+      {n:'5G Home',note:'$50, or $35 with select Verizon mobile · Capped at 100–300 Mbps · 3-yr price lock',p:'$50'},
+      {n:'5G Home Plus',note:'$60, or $45 with mobile · 300–1,000 Mbps range (pure C-band typically operates heavily at 300–500 Mbps) · 4-yr lock · Netflix & Max (ads) first year',p:'$60'},
+      {n:'5G Home Ultimate',note:'$75, or $60 with mobile · C-band pure operates heavily at 300–500 Mbps; advertised up to 1 Gbps requires mmWave (not present in Forsyth) · 5-yr lock',p:'$75'}
     ],
-    note:'Verizon’s three plans — 5G Home, Home Plus, Home Ultimate — all run on 5G Ultra Wideband, which in Forsyth means C-band, not mmWave. So the Ultimate tier’s advertised gigabit isn’t reachable here; realistic speeds are around 300 Mbps, up to 500 on a strong signal, comparable to T-Mobile’s mid-band. Unlimited data, a multi-year price lock, no contract; some homes need an external antenna mounted for a usable signal.',
+    note:'Verizon relies heavily on C-Band (n77) in Forsyth to power its service. Pure C-band typically operates heavily in the 300–500 Mbps range, though Home Plus advertised rates span up to 1,000 Mbps on mmWave. Verizon strictly regulates address sign-ups based on capacity; if qualified, speeds will remain highly stable and rarely throttle below 100 Mbps.',
     best:['Verizon mobile customers','No-install','Multi-year price lock']
   },
   {
@@ -1106,14 +1173,14 @@ const P = [
     tech:'mid-band n77 (3.45 GHz)',
     gw:'All-Fi Hub gateway · self-install',
     avail:'Wireless · Selective tower coverage', adCls:'cap',
-    downL:'225 Mbps', upL:'25 Mbps', sym:false, lat:'40–60 ms typical',
+    downL:'90 – 300 Mbps', upL:'25 Mbps', sym:false, lat:'40–60 ms typical',
     cap:'Unlimited', capFree:true, equip:'Included', contract:'No contract',
     priceNum:'$47', priceSuf:'– $60 /mo',
     verdict:'SIMPLE 5G FALLBACK FOR AT&T USERS',
     tiers:[
-      {n:'Internet Air',note:'flat rate; ~$47 for AT&T mobile customers',p:'$60'}
+      {n:'Internet Air',note:'flat rate; ~$47 for AT&T mobile customers · Typical operating range 90–300 Mbps',p:'$60'}
     ],
-    note:'AT&T’s 5G home product, offered selectively — usually at addresses where fiber hasn’t reached. Tops out around 225 Mbps, flat monthly rate, simple self-install, unlimited data. Narrower availability than T-Mobile or Verizon FWA.',
+    note:'AT&T’s FWA product utilizes their "5G+" C-band spectrum and low-band 5G. They offer a single straightforward tier with a typical operating range of 90–300 Mbps. It targets legacy DSL upgrade areas and rural/suburban pockets, prioritizing stable connectivity over raw throughput.',
     best:['AT&T mobile customers','No-install','Simple flat rate']
   },
   {
