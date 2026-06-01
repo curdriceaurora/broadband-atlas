@@ -962,13 +962,15 @@
 </dialog>
 
 <footer>
-  <div class="legend">
-    <span class="leg"><span class="sw" style="background:var(--fiber)"></span>Wired (Fiber/Cable)</span>
-    <span class="leg"><span class="sw" style="background:var(--fwa)"></span>Wireless (5G Fixed)</span>
-    <span class="leg"><span class="sw" style="background:var(--sat)"></span>Satellite (LEO/GEO)</span>
-  </div>
-  
   <div class="footer-notes-grid">
+    <details class="note-card copper-dsl" open>
+      <summary>
+        <h4>🚫 Copper DSL Exclusion Policy (AT&amp;T &amp; EarthLink)</h4>
+        <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <p>Legacy copper DSL is deliberately excluded from this atlas. AT&amp;T permanently ceased new DSL orders in 2020. Furthermore, across Forsyth County's fiber-built footprint, EarthLink can no longer get a new copper loop provisioned. Since no new DSL line can actually be ordered at any local address, it has been left off rather than listed as a service you can't buy.</p>
+    </details>
+
     <details class="note-card speed-methodology" open>
       <summary>
         <h4>⚡ Speed Methodology &amp; FWA Ranges</h4>
@@ -1039,6 +1041,9 @@
           <p style="font-size: 11.5px; font-style: italic; color: var(--ink-faint); margin-top: 10px; line-height: 1.38;">
             <strong>Why do these ranges vary so much?</strong> Distance from tower, building penetration (C-band struggles with concrete/brick), and mobile prioritization during high-demand hours shape home speeds.
           </p>
+          <p style="font-size: 11.5px; font-style: italic; color: var(--ink-faint); margin-top: 10px; line-height: 1.38;">
+            <strong>Exclusion of mmWave in Forsyth:</strong> Forsyth County does not have millimeter wave (mmWave) coverage for 5G FWA. Consequently, even though higher rate plans are advertised nationally, Verizon FWA is realistically capped to standard C-band limits (~300 Mbps) with an operating range of 100–300 Mbps.
+          </p>
         </div>
       </div>
     </details>
@@ -1057,14 +1062,6 @@
         <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
       <p>Coverage figures reflect the Cumming and Forsyth County area and shift constantly as networks expand. Always confirm exact port and signal availability at your specific address before committing. This atlas is a fully independent reference utility and is not affiliated with any broadband provider.</p>
-    </details>
-    
-    <details class="note-card copper-dsl" open>
-      <summary>
-        <h4>🚫 Copper DSL Exclusion Policy (AT&amp;T &amp; EarthLink)</h4>
-        <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6"/></svg>
-      </summary>
-      <p>Legacy copper DSL is deliberately excluded from this atlas. AT&amp;T permanently ceased new DSL orders in 2020. Furthermore, across Forsyth County's fiber-built footprint, EarthLink can no longer get a new copper loop provisioned. Since no new DSL line can actually be ordered at any local address, it has been left off rather than listed as a service you can't buy.</p>
     </details>
   </div>
 </footer>
