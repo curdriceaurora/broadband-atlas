@@ -1137,7 +1137,7 @@ const P = [
     tech:'mid-band n41 (2.5 GHz)',
     gw:'5G gateway (Wi-Fi 7 on Amplified/All-In) · self-install (~15 min)',
     avail:'Wireless · ≈85% mid-band coverage', adCls:'cap',
-    downL:'133 – 498 Mbps', upL:'55 Mbps', sym:false, lat:'30–45 ms typical',
+    downL:'498 Mbps', upL:'55 Mbps', opRange:'133 – 498 Mbps', sym:false, lat:'30–45 ms typical',
     cap:'Unlimited (prioritized >1.2 TB)', capFree:true, equip:'Included', contract:'No contract',
     priceNum:'$35', priceSuf:'– $70 /mo',
     verdict:'BEST RENTER & BACKUP OPTION',
@@ -1155,7 +1155,7 @@ const P = [
     tech:'mid-band n77 C-band (3.7 GHz)',
     gw:'5G receiver/gateway · some installs need external antenna',
     avail:'Wireless · ≈60% mid-band coverage', adCls:'cap',
-    downL:'100 – 500 Mbps', upL:'50 Mbps', sym:false, lat:'35–50 ms typical',
+    downL:'500 Mbps', upL:'50 Mbps', opRange:'100 – 500 Mbps', sym:false, lat:'35–50 ms typical',
     cap:'Unlimited', capFree:true, equip:'Included', contract:'No contract',
     priceNum:'$35', priceSuf:'– $75 /mo',
     verdict:'BEST VALUE 5G FOR MOBILE USERS',
@@ -1173,7 +1173,7 @@ const P = [
     tech:'mid-band n77 (3.45 GHz)',
     gw:'All-Fi Hub gateway · self-install',
     avail:'Wireless · Selective tower coverage', adCls:'cap',
-    downL:'90 – 300 Mbps', upL:'25 Mbps', sym:false, lat:'40–60 ms typical',
+    downL:'300 Mbps', upL:'25 Mbps', opRange:'90 – 300 Mbps', sym:false, lat:'40–60 ms typical',
     cap:'Unlimited', capFree:true, equip:'Included', contract:'No contract',
     priceNum:'$47', priceSuf:'– $60 /mo',
     verdict:'SIMPLE 5G FALLBACK FOR AT&T USERS',
@@ -1393,6 +1393,7 @@ function card(p, i, isBestValue) {
       <div class="visual-bars">
         ${speedBarHTML('Max download', p.downL, p.color, p.cat)}
         ${speedBarHTML('Max upload', p.upL, p.color, p.cat)}
+        ${p.opRange ? speedBarHTML('Operating range DL', p.opRange, p.color, p.cat) : ''}
       </div>
       
       <div class="flags">
