@@ -1337,7 +1337,7 @@ function parseSpeedRange(str) {
 function speedBarHTML(label, speedStr, color, cat) {
   let maxRef = 5000; // Default fixed 5 Gbps
   if (cat === 'fwa') {
-    maxRef = 1000; // FWA 1 Gbps
+    maxRef = 500; // FWA 500 Mbps
   } else if (cat === 'sat' || cat === 'legacy') {
     maxRef = 300; // Satellite 300 Mbps
   }
