@@ -993,7 +993,7 @@
             
             <div>
               <strong style="color: var(--brand-verizon);">2. Verizon 5G Ultra Wideband:</strong> 
-              <span style="font-family: var(--mono); font-weight: 700;">300 – 1,000 Mbps</span> (Home Plus; C-band pure operates heavily at <span style="font-family: var(--mono); font-weight: 700;">300 – 500 Mbps</span>) · 
+              <span style="font-family: var(--mono); font-weight: 700;">300 – 500 Mbps</span> (Home Plus; purely C-band) · 
               <span style="font-family: var(--mono); font-weight: 700;">100 – 300 Mbps</span> (Home Base).
               <span style="color: var(--ink-faint);">Capacity-gated by tower; high stability and rarely throttles under 100 Mbps.</span>
             </div>
@@ -1024,7 +1024,7 @@
               <tr style="border-bottom: 1px solid var(--border-soft);">
                 <td style="padding: 6px; font-weight: 700; color: var(--brand-verizon);">Verizon</td>
                 <td style="padding: 6px;">5G Home Plus</td>
-                <td style="padding: 6px; font-family: var(--mono);">300 – 1,000 Mbps</td>
+                <td style="padding: 6px; font-family: var(--mono);">300 – 500 Mbps</td>
                 <td style="padding: 6px;">~300 – 450 Mbps</td>
               </tr>
               <tr style="border-bottom: 1px solid var(--border-soft);">
@@ -1155,16 +1155,16 @@ const P = [
     tech:'mid-band n77 C-band (3.7 GHz)',
     gw:'5G receiver/gateway · some installs need external antenna',
     avail:'Wireless · ≈60% mid-band coverage', adCls:'cap',
-    downL:'100 – 1,000 Mbps', upL:'50 Mbps', sym:false, lat:'35–50 ms typical',
+    downL:'100 – 500 Mbps', upL:'50 Mbps', sym:false, lat:'35–50 ms typical',
     cap:'Unlimited', capFree:true, equip:'Included', contract:'No contract',
     priceNum:'$35', priceSuf:'– $75 /mo',
     verdict:'BEST VALUE 5G FOR MOBILE USERS',
     tiers:[
       {n:'5G Home',note:'$50, or $35 with select Verizon mobile · Capped at 100–300 Mbps · 3-yr price lock',p:'$50'},
-      {n:'5G Home Plus',note:'$60, or $45 with mobile · 300–1,000 Mbps range (pure C-band typically operates heavily at 300–500 Mbps) · 4-yr lock · Netflix & Max (ads) first year',p:'$60'},
-      {n:'5G Home Ultimate',note:'$75, or $60 with mobile · C-band pure operates heavily at 300–500 Mbps; advertised up to 1 Gbps requires mmWave (not present in Forsyth) · 5-yr lock',p:'$75'}
+      {n:'5G Home Plus',note:'$60, or $45 with mobile · 300–500 Mbps range on pure C-band · 4-yr lock · Netflix & Max (ads) first year',p:'$60'},
+      {n:'5G Home Ultimate',note:'$75, or $60 with mobile · 300–500 Mbps range on pure C-band (mmWave gigabit tiers are unavailable in Forsyth) · 5-yr lock',p:'$75'}
     ],
-    note:'Verizon relies heavily on C-Band (n77) in Forsyth to power its service. Pure C-band typically operates heavily in the 300–500 Mbps range, though Home Plus advertised rates span up to 1,000 Mbps on mmWave. Verizon strictly regulates address sign-ups based on capacity; if qualified, speeds will remain highly stable and rarely throttle below 100 Mbps.',
+    note:'Verizon relies heavily on C-Band (n77) in Forsyth to power its service. Pure C-band typically operates in the 300–500 Mbps range. Verizon strictly regulates address sign-ups based on capacity; if qualified, speeds will remain highly stable and rarely throttle below 100 Mbps.',
     best:['Verizon mobile customers','No-install','Multi-year price lock']
   },
   {
