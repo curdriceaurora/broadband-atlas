@@ -33,6 +33,15 @@
     --sat: #6f7d8c; 
     --legacy: #9a8d72;
     
+    /* Brand Colors (Light Theme) */
+    --brand-att: #0077c5;
+    --brand-tmo: #e20074;
+    --brand-xfinity: #d61a0c;
+    --brand-verizon: #cd040b;
+    --brand-starlink: #666666;
+    --brand-viasat: #00549f;
+    --brand-hughesnet: #d9381e;
+    
     --display: 'Fraunces', Georgia, serif;
     --body: 'Hanken Grotesk', system-ui, -apple-system, sans-serif;
     --mono: 'JetBrains Mono', ui-monospace, monospace;
@@ -70,6 +79,15 @@
     --fwa: #6e8ef5;
     --sat: #8799ab;
     --legacy: #baa887;
+    
+    /* Brand Colors (Dark Theme) */
+    --brand-att: #00a8e0;
+    --brand-tmo: #ea0a8e;
+    --brand-xfinity: #ff4d4d;
+    --brand-verizon: #ff3b30;
+    --brand-starlink: #e5e5e5;
+    --brand-viasat: #2f8feb;
+    --brand-hughesnet: #ff6b35;
     
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
@@ -319,7 +337,8 @@
     animation: rise .45s cubic-bezier(.2, .7, .3, 1) both; position: relative;
   }
   .card:hover {
-    transform: translateY(-5px); box-shadow: var(--shadow-lg), 0 8px 24px rgba(0, 0, 0, 0.04);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg), 0 10px 30px color-mix(in srgb, var(--card-border, var(--primary)) 20%, transparent);
     border-color: var(--card-border, var(--primary));
   }
   @keyframes rise { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: none; } }
@@ -989,7 +1008,7 @@ const LOGO={"att":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wEEEAAKAA
 const LK={attfiber:"att",attair:"att",tmofiber:"tmo",tmo5g:"tmo",xfinity:"xfinity",vz5g:"verizon",starlink:"starlink",viasat:"viasat",hughesnet:"hughesnet"};
 const P = [
   {
-    id:'attfiber', name:'AT&T Fiber', cat:'fiber', color:'var(--fiber)',
+    id:'attfiber', name:'AT&T Fiber', cat:'fiber', color:'var(--brand-att)',
     url:'https://www.att.com/internet/fiber/',
     tech:'XGS-PON · GPON in older areas',
     gw:'BGW320 gateway (integrated ONT) · Wi-Fi 6 / 6E',
@@ -1009,7 +1028,7 @@ const P = [
     best:['Uploads / home lab','Fastest tier','Power users']
   },
   {
-    id:'tmofiber', name:'T-Mobile Fiber', cat:'fiber', color:'var(--fiber)',
+    id:'tmofiber', name:'T-Mobile Fiber', cat:'fiber', color:'var(--brand-tmo)',
     url:'https://www.t-mobile.com/home-internet/fiber',
     tech:'XGS-PON · Lumos build · Calix',
     gw:'Calix GigaSpire (integrated ONT) · Wi-Fi 6 + mesh',
@@ -1028,7 +1047,7 @@ const P = [
     best:['Best value 2 Gig','Uploads / home lab','Cord-cutters']
   },
   {
-    id:'xfinity', name:'Xfinity Internet', cat:'cable', color:'var(--cable)',
+    id:'xfinity', name:'Xfinity Internet', cat:'cable', color:'var(--brand-xfinity)',
     url:'https://www.xfinity.com/local/ga/cumming',
     tech:'DOCSIS 3.1 (HFC) · 4.0 not yet in Forsyth',
     gw:'XB7 / XB8 gateway · Wi-Fi 6 / 6E',
@@ -1046,7 +1065,7 @@ const P = [
     best:['Available everywhere','Streaming bundles','Quick install']
   },
   {
-    id:'tmo5g', name:'T-Mobile 5G Home Internet', cat:'fwa', color:'var(--fwa)',
+    id:'tmo5g', name:'T-Mobile 5G Home Internet', cat:'fwa', color:'var(--brand-tmo)',
     url:'https://www.t-mobile.com/home-internet',
     tech:'mid-band n41 (2.5 GHz)',
     gw:'5G gateway (Wi-Fi 7 on Amplified/All-In) · self-install (~15 min)',
@@ -1064,7 +1083,7 @@ const P = [
     best:['No-install / renters','Budget w/ T-Mobile line','Backup line']
   },
   {
-    id:'vz5g', name:'Verizon 5G Home Internet', cat:'fwa', color:'var(--fwa)',
+    id:'vz5g', name:'Verizon 5G Home Internet', cat:'fwa', color:'var(--brand-verizon)',
     url:'https://www.verizon.com/home/internet/',
     tech:'mid-band n77 C-band (3.7 GHz)',
     gw:'5G receiver/gateway · some installs need external antenna',
@@ -1082,7 +1101,7 @@ const P = [
     best:['Verizon mobile customers','No-install','Multi-year price lock']
   },
   {
-    id:'attair', name:'AT&T Internet Air', cat:'fwa', color:'var(--fwa)',
+    id:'attair', name:'AT&T Internet Air', cat:'fwa', color:'var(--brand-att)',
     url:'https://www.att.com/internet/air/',
     tech:'mid-band n77 (3.45 GHz)',
     gw:'All-Fi Hub gateway · self-install',
@@ -1098,7 +1117,7 @@ const P = [
     best:['AT&T mobile customers','No-install','Simple flat rate']
   },
   {
-    id:'starlink', name:'Starlink', cat:'sat', color:'var(--sat)',
+    id:'starlink', name:'Starlink', cat:'sat', color:'var(--brand-starlink)',
     url:'https://www.starlink.com/',
     tech:'LEO satellite',
     gw:'Self-install dish + router · ~$349+ hardware upfront',
@@ -1116,7 +1135,7 @@ const P = [
     best:['True rural / no coverage','Anywhere with sky view']
   },
   {
-    id:'viasat', name:'Viasat', cat:'legacy', color:'var(--legacy)',
+    id:'viasat', name:'Viasat', cat:'legacy', color:'var(--brand-viasat)',
     url:'https://www.viasat.com/',
     tech:'Geostationary satellite (Ka-band)',
     gw:'Leased dish + modem · professional install',
@@ -1134,7 +1153,7 @@ const P = [
     best:['No terrestrial + higher data need','Rural, not gaming']
   },
   {
-    id:'hughesnet', name:'HughesNet', cat:'legacy', color:'var(--legacy)',
+    id:'hughesnet', name:'HughesNet', cat:'legacy', color:'var(--brand-hughesnet)',
     url:'https://www.hughesnet.com/',
     tech:'Geostationary satellite (Ka-band, JUPITER 3)',
     gw:'Leased dish + modem · professional install',
@@ -1294,7 +1313,7 @@ function card(p, i, isBestValue) {
         </label>
       </div>
       
-      <div class="verdict-banner" style="background: ${p.color}0c; color: ${p.color}; border: 1px solid ${p.color}25;">★ ${p.verdict}</div>
+      <div class="verdict-banner" style="background: color-mix(in srgb, ${p.color} 6%, transparent); color: ${p.color}; border: 1px solid color-mix(in srgb, ${p.color} 20%, transparent);">★ ${p.verdict}</div>
       
       <div class="ptech">${p.tech}</div>
       
