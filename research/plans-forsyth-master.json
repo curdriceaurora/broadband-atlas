@@ -50,8 +50,8 @@
     },
     {
       "id": "tmofiber", "name": "T-Mobile Fiber (Lumos)", "type": "fiber",
-      "availability_by_address": {"6715 Fairfield Trce 30024": "unknown (buildout in progress)"},
-      "availability_summary": "Lumos buildout in progress in South Forsyth; confirm per parcel",
+      "availability_by_address": {"6715 Fairfield Trce 30024": "pre-order eligible"},
+      "availability_summary": "Lumos buildout in progress in South Forsyth; PRE-ORDER eligible at Fairfield Trce (300/1 Gig/2 Gig offered)",
       "source": "plans-fairfield-trce-30024.json",
       "plans": [
         {"plan_name": "Fiber 300", "down_mbps": 300, "up_mbps": 300, "base_rate": 55, "autopay_rate": 45, "mobile_bundle_rate": null, "promo_rate": 35, "promo_terms": "promo $35/mo (incl $10 autopay disc + $10 T-Fiber disc)", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["Wi-Fi router included", "install included", "symmetric speeds"]},
@@ -74,12 +74,12 @@
       "id": "xfinity", "name": "Xfinity (Comcast Cable)", "type": "cable",
       "availability_by_address": {"6715 Fairfield Trce 30024": "available"},
       "availability_summary": "available in much of the area; spotty in newer South Forsyth subdivisions",
-      "source": "plans-fairfield-trce-30024.json (address-verified). base_rate=everyday; promo_rate=special-offer.",
+      "source": "Xfinity plan-builder FCC Broadband Facts (screenshots, address-verified). base_rate = FCC monthly price, locked 5 yrs, no contract. Includes Xfinity WiFi gateway + 1 Xfinity Mobile line (Mobile Select).",
       "plans": [
-        {"plan_name": "Internet 300", "down_mbps": 300, "up_mbps": null, "typical_down_mbps": null, "typical_up_mbps": null, "base_rate": 50, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 40, "promo_terms": "special-offer $40 vs everyday $50", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access"]},
-        {"plan_name": "Internet 500", "down_mbps": 500, "up_mbps": null, "typical_down_mbps": 586, "typical_up_mbps": 117, "base_rate": 55, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 45, "promo_terms": "special-offer $45 vs everyday $55", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access"]},
-        {"plan_name": "Internet 1 Gig", "down_mbps": 1000, "up_mbps": null, "typical_down_mbps": 1170, "typical_up_mbps": 117, "base_rate": 60, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 50, "promo_terms": "special-offer $50 vs everyday $60", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access", "Peacock Premium 1 yr ($10.99/mo value)"]},
-        {"plan_name": "Internet 2 Gig", "down_mbps": 2000, "up_mbps": null, "typical_down_mbps": 2278, "typical_up_mbps": 293, "base_rate": 110, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 100, "promo_terms": "special-offer $100 vs everyday $110", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access", "Peacock Premium 1 yr ($10.99/mo value)"]}
+        {"plan_name": "Internet 300", "down_mbps": 300, "up_mbps": null, "typical_down_mbps": null, "typical_up_mbps": null, "base_rate": 40, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": "price fixed 5 yrs, no contract", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access", "1 Xfinity Mobile line included"]},
+        {"plan_name": "Internet 500", "down_mbps": 500, "up_mbps": null, "typical_down_mbps": 586, "typical_up_mbps": 117, "base_rate": 45, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": "price fixed 5 yrs, no contract", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access", "1 Xfinity Mobile line included"]},
+        {"plan_name": "Internet 1 Gig", "down_mbps": 1000, "up_mbps": null, "typical_down_mbps": 1170, "typical_up_mbps": 117, "base_rate": 50, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": "price fixed 5 yrs, no contract", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access", "1 Xfinity Mobile line included", "Peacock Premium 1 yr ($10.99/mo value)"]},
+        {"plan_name": "Internet 2 Gig", "down_mbps": 2000, "up_mbps": null, "typical_down_mbps": 2278, "typical_up_mbps": 293, "base_rate": 100, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": "price fixed 5 yrs, no contract", "data": "unlimited (per checkout)", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["WiFi gateway included", "Xfinity WiFi hotspot access", "1 Xfinity Mobile line included", "Peacock Premium 1 yr ($10.99/mo value)"]}
       ]
     },
     {
@@ -88,7 +88,7 @@
       "availability_summary": "~43-60% mid-band coverage; available at tested addresses",
       "source": "plans-fairfield-trce-30024.json (base) + verizon.com (autopay/bundle). Autopay -$10; Mobile+Home -$15.",
       "plans": [
-        {"plan_name": "5G Home", "down_mbps": 100, "up_mbps": null, "typical_down_mbps": null, "base_rate": 60, "autopay_rate": 50, "mobile_bundle_rate": 35, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 3, "perks": ["router included", "3-yr price lock", "FOX One 3 mo free", "30-day money-back"]},
+        {"plan_name": "5G Home", "down_mbps": 100, "up_mbps": null, "typical_down_mbps": "25-85", "base_rate": 60, "autopay_rate": 50, "mobile_bundle_rate": 35, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 3, "perks": ["router included", "3-yr price lock", "FOX One 3 mo free", "30-day money-back"]},
         {"plan_name": "5G Home Plus", "down_mbps": 150, "up_mbps": null, "typical_down_mbps": "60-100", "base_rate": 70, "autopay_rate": 60, "mobile_bundle_rate": 45, "promo_rate": null, "promo_terms": null, "data": "unlimited premium", "contract": "none", "equipment_fee": 0, "price_lock_years": 4, "perks": ["router included", "1080p HD streaming", "4-yr price lock", "FOX One 3 mo free", "30-day money-back"]},
         {"plan_name": "5G Home Ultimate", "down_mbps": 300, "up_mbps": null, "typical_down_mbps": "85-250", "base_rate": 85, "autopay_rate": 75, "mobile_bundle_rate": 60, "promo_rate": null, "promo_terms": null, "data": "unlimited premium", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["router included", "4K UHD streaming", "5-yr price lock", "free router upgrade after 3 yr", "Wi-Fi extender", "$400 off Samsung", "$10/mo streaming perk", "30-day money-back"]}
       ]
