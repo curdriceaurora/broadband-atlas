@@ -95,13 +95,13 @@
     },
     {
       "id": "starlink", "name": "Starlink", "type": "satellite",
-      "availability_by_address": {"30024": "available (capacity-dependent)"},
-      "availability_summary": "available region-wide, capacity-gated",
-      "source": "starlink.com/residential",
+      "availability_by_address": {"6715 Fairfield Trce 30024": "available — $0 hardware rental offer"},
+      "availability_summary": "available region-wide, capacity-gated; $0-hardware rental confirmed at Fairfield Trce",
+      "source": "starlink.com order page (address-verified) + starlink.com/residential",
       "plans": [
-        {"plan_name": "Residential 100 Mbps", "down_mbps": 100, "up_mbps": 20, "base_rate": 55, "autopay_rate": 55, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "$349 one-time ($0 in select areas)", "price_lock_years": null, "perks": ["unlimited data"]},
-        {"plan_name": "Residential 200 Mbps", "down_mbps": 200, "up_mbps": 25, "base_rate": 85, "autopay_rate": 85, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "$349 one-time ($0 in select areas)", "price_lock_years": null, "perks": ["better congestion priority"]},
-        {"plan_name": "Residential Max", "down_mbps": 400, "up_mbps": 30, "base_rate": 130, "autopay_rate": 130, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited priority", "contract": "none", "equipment_fee": 0, "hardware_cost": "$349 one-time ($0 in select areas)", "price_lock_years": null, "perks": ["up to 400+ Mbps", "optional Mini kit"]}
+        {"plan_name": "Residential 100 Mbps", "down_mbps": 100, "up_mbps": 20, "base_rate": 55, "autopay_rate": 55, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "$0 rental (confirmed @ 6715 Fairfield Trce) or $349 purchase", "price_lock_years": null, "perks": ["unlimited data"]},
+        {"plan_name": "Residential 200 Mbps", "down_mbps": 200, "up_mbps": 25, "base_rate": 85, "autopay_rate": 85, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "$0 rental (confirmed @ 6715 Fairfield Trce) or $349 purchase", "price_lock_years": null, "perks": ["better congestion priority"]},
+        {"plan_name": "Residential Max", "down_mbps": 400, "up_mbps": 30, "base_rate": 130, "autopay_rate": 130, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited priority", "contract": "none", "equipment_fee": 0, "hardware_cost": "$0 rental (confirmed @ 6715 Fairfield Trce) or $349 purchase", "price_lock_years": null, "perks": ["up to 400+ Mbps", "optional Mini kit"]}
       ]
     },
     {
