@@ -1,0 +1,129 @@
+{
+  "_meta": {
+    "region": "Forsyth County, GA — South Forsyth / Suwanee 30024 & Cumming 30041",
+    "purpose": "Canonical consolidated residential broadband plan catalog, normalized from the per-address research files. Source of truth for portal reconciliation.",
+    "captured_at": "2026-06-01",
+    "addresses_tested": [
+      "6715 Fairstream Ct, Suwanee 30024",
+      "610 Lambert Cove Trl, Suwanee 30024",
+      "6715 Fairfield Trce, Suwanee 30024",
+      "672 Bell Creek Rd, Cumming 30041"
+    ],
+    "schema": "per plan: down_mbps, up_mbps, base_rate, autopay_rate, mobile_bundle_rate, promo_rate, promo_terms, data, contract, equipment_fee, hardware_cost, price_lock_years, perks, source",
+    "removed": [
+      "Verizon Fios — NOT available in Georgia (Fios footprint is Northeast/Mid-Atlantic). Dropped from Forsyth analysis."
+    ],
+    "gaps_and_flags": [
+      "HughesNet: fully address-gated; pricing below is prior research estimate, NOT checker-confirmed.",
+      "T-Mobile 5G: source captures list a $35 equipment_fee — unusual (T-Mobile normally includes the gateway free). Flagged for verification.",
+      "AT&T Fiber: only base_rate captured from checkers (autopay/bundle not separately quoted).",
+      "AT&T Fiber availability is parcel-dependent (see availability_by_address)."
+    ]
+  },
+  "providers": [
+    {
+      "id": "attfiber", "name": "AT&T Fiber", "type": "fiber",
+      "availability_by_address": {
+        "6715 Fairstream Ct 30024": false,
+        "610 Lambert Cove Trl 30024": true,
+        "672 Bell Creek Rd 30041": true
+      },
+      "availability_summary": "parcel-dependent — serviceable at many South Forsyth/Cumming addresses, waitlist at others",
+      "source": "plans-lambert-cove-30024.json, plans-cumming-30041.json",
+      "plans": [
+        {"plan_name": "Internet 300", "down_mbps": 300, "up_mbps": 300, "base_rate": 40, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["$200 reward card", "20% off w/ AT&T wireless"]},
+        {"plan_name": "Internet 500", "down_mbps": 500, "up_mbps": 500, "base_rate": 50, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["$200 reward card", "20% off w/ AT&T wireless"]},
+        {"plan_name": "Internet 1 Gig", "down_mbps": 1000, "up_mbps": 1000, "base_rate": 48, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["$200 reward card", "20% off w/ AT&T wireless"]},
+        {"plan_name": "Internet 2 Gig", "down_mbps": 2000, "up_mbps": 2000, "base_rate": 93, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["$200 reward card"]},
+        {"plan_name": "Internet 5 Gig", "down_mbps": 5000, "up_mbps": 5000, "base_rate": 123, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["$200 reward card"]}
+      ]
+    },
+    {
+      "id": "attair", "name": "AT&T Internet Air", "type": "fwa",
+      "availability_by_address": {"6715 Fairstream Ct 30024": true},
+      "availability_summary": "available (selective tower coverage)",
+      "source": "plans-30024.json (Fairstream, address-verified)",
+      "plans": [
+        {"plan_name": "Internet Air", "down_mbps": null, "up_mbps": null, "base_rate": 65, "autopay_rate": 60, "mobile_bundle_rate": 47, "promo_rate": 60, "promo_terms": "$60/mo promo vs $65 standard", "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "All-Fi Hub gateway included, self-install", "price_lock_years": null, "perks": ["All-Fi Hub multi-gig gateway", "ActiveArmor security", "no technician visit", "20% off w/ AT&T wireless"]}
+      ]
+    },
+    {
+      "id": "tmofiber", "name": "T-Mobile Fiber (Lumos)", "type": "fiber",
+      "availability_by_address": {"6715 Fairfield Trce 30024": "unknown (buildout in progress)"},
+      "availability_summary": "Lumos buildout in progress in South Forsyth; confirm per parcel",
+      "source": "plans-fairfield-trce-30024.json",
+      "plans": [
+        {"plan_name": "Fiber 300", "down_mbps": 300, "up_mbps": 300, "base_rate": 55, "autopay_rate": 45, "mobile_bundle_rate": null, "promo_rate": 35, "promo_terms": "promo $35/mo (incl $10 autopay disc + $10 T-Fiber disc)", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["Wi-Fi router included", "install included", "symmetric speeds"]},
+        {"plan_name": "Fiber 1 Gig", "down_mbps": 1000, "up_mbps": 1000, "base_rate": 70, "autopay_rate": 60, "mobile_bundle_rate": null, "promo_rate": 50, "promo_terms": "promo $50/mo; one month free", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["Wi-Fi router included", "install included", "one month free", "symmetric speeds"]},
+        {"plan_name": "Fiber 2 Gig", "down_mbps": 2000, "up_mbps": 2000, "base_rate": 80, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["$100 prepaid card"], "_source_note": "base from t-mobile.com (not in Fairfield capture)"}
+      ]
+    },
+    {
+      "id": "tmo5g", "name": "T-Mobile 5G Home Internet", "type": "fwa",
+      "availability_by_address": {"30024": "unknown (capacity-gated)"},
+      "availability_summary": "~71-85% mid-band coverage; capacity-gated per address",
+      "source": "plans-30024.json + internet-providers-30024.json (agree)",
+      "plans": [
+        {"plan_name": "Rely (Base)", "down_mbps": 75, "up_mbps": 10, "base_rate": 35, "autopay_rate": 35, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 35, "price_lock_years": 5, "perks": ["5-yr price guarantee"], "_flag": "equipment_fee $35 unusual — verify"},
+        {"plan_name": "Amplified (Mid)", "down_mbps": 100, "up_mbps": 15, "base_rate": 50, "autopay_rate": 50, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 35, "price_lock_years": 5, "perks": ["5-yr price guarantee"]},
+        {"plan_name": "All-In (Premium)", "down_mbps": 150, "up_mbps": 20, "base_rate": 85, "autopay_rate": 85, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 35, "price_lock_years": 5, "perks": ["5-yr price guarantee"]}
+      ]
+    },
+    {
+      "id": "xfinity", "name": "Xfinity (Comcast Cable)", "type": "cable",
+      "availability_by_address": {"6715 Fairfield Trce 30024": "available"},
+      "availability_summary": "available in much of the area; spotty in newer South Forsyth subdivisions",
+      "source": "plans-fairfield-trce-30024.json (address-verified). Suwanee-page everyday rates: 300 $75, 500 $85.",
+      "plans": [
+        {"plan_name": "Internet 300", "down_mbps": 300, "up_mbps": null, "base_rate": 45, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 45, "promo_terms": "promo; everyday ~$75", "data": "1.2 TB", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["equipment included"]},
+        {"plan_name": "Internet 500", "down_mbps": 500, "up_mbps": null, "base_rate": 60, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 60, "promo_terms": "promo; everyday ~$85", "data": "1.2 TB", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["equipment included"]},
+        {"plan_name": "Internet 1 Gig", "down_mbps": 1000, "up_mbps": null, "base_rate": 50, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 50, "promo_terms": "promo $50/mo (5-yr lock offer); higher after", "data": "1.2 TB", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["equipment included", "Peacock Premium 2 yrs (offer)"]},
+        {"plan_name": "Internet 2 Gig", "down_mbps": 2000, "up_mbps": null, "base_rate": 100, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 100, "promo_terms": "promo; higher after", "data": "1.2 TB", "contract": "none", "equipment_fee": 0, "price_lock_years": null, "perks": ["equipment included"]}
+      ]
+    },
+    {
+      "id": "vz5g", "name": "Verizon 5G Home Internet", "type": "fwa",
+      "availability_by_address": {"6715 Fairstream Ct 30024": true, "6715 Fairfield Trce 30024": true},
+      "availability_summary": "~43-60% mid-band coverage; available at tested addresses",
+      "source": "plans-fairfield-trce-30024.json (base) + verizon.com (autopay/bundle). Autopay -$10; Mobile+Home -$15.",
+      "plans": [
+        {"plan_name": "5G Home", "down_mbps": 100, "up_mbps": null, "base_rate": 60, "autopay_rate": 50, "mobile_bundle_rate": 35, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 3, "perks": ["3-yr price lock", "FOX One 3 mo free"]},
+        {"plan_name": "5G Home Plus", "down_mbps": 150, "up_mbps": null, "base_rate": 70, "autopay_rate": 60, "mobile_bundle_rate": 45, "promo_rate": null, "promo_terms": null, "data": "unlimited premium", "contract": "none", "equipment_fee": 0, "price_lock_years": 4, "perks": ["4-yr price lock", "FOX One 3 mo free"]},
+        {"plan_name": "5G Home Ultimate", "down_mbps": 300, "up_mbps": null, "base_rate": 85, "autopay_rate": 75, "mobile_bundle_rate": 60, "promo_rate": null, "promo_terms": null, "data": "unlimited premium", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["5-yr price lock", "free router upgrade after 3 yr", "Wi-Fi extender", "$400 off Samsung", "$10/mo streaming perk"]}
+      ]
+    },
+    {
+      "id": "starlink", "name": "Starlink", "type": "satellite",
+      "availability_by_address": {"30024": "available (capacity-dependent)"},
+      "availability_summary": "available region-wide, capacity-gated",
+      "source": "starlink.com/residential",
+      "plans": [
+        {"plan_name": "Residential 100 Mbps", "down_mbps": 100, "up_mbps": 20, "base_rate": 55, "autopay_rate": 55, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "$349 one-time ($0 in select areas)", "price_lock_years": null, "perks": ["unlimited data"]},
+        {"plan_name": "Residential 200 Mbps", "down_mbps": 200, "up_mbps": 25, "base_rate": 85, "autopay_rate": 85, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "$349 one-time ($0 in select areas)", "price_lock_years": null, "perks": ["better congestion priority"]},
+        {"plan_name": "Residential Max", "down_mbps": 400, "up_mbps": 30, "base_rate": 130, "autopay_rate": 130, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited priority", "contract": "none", "equipment_fee": 0, "hardware_cost": "$349 one-time ($0 in select areas)", "price_lock_years": null, "perks": ["up to 400+ Mbps", "optional Mini kit"]}
+      ]
+    },
+    {
+      "id": "viasat", "name": "Viasat", "type": "satellite",
+      "availability_by_address": {"30024": "available"},
+      "availability_summary": "available region-wide (GEO)",
+      "source": "viasat.com/satellite-internet/plans",
+      "plans": [
+        {"plan_name": "Essentials", "down_mbps": null, "up_mbps": null, "base_rate": 69.99, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 39.99, "promo_terms": "$39.99 first 3 mo, then $69.99", "data": "unlimited (soft)", "contract": "none", "equipment_fee": 15, "price_lock_years": null, "perks": ["$90 off over 3 mo"]},
+        {"plan_name": "Unleashed (Premier)", "down_mbps": 150, "up_mbps": null, "base_rate": 99.99, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 69.99, "promo_terms": "$69.99 first 3 mo, then $99.99", "data": "unlimited (soft 850GB)", "contract": "none", "equipment_fee": 15, "price_lock_years": null, "perks": ["$300 Mastercard reward card (switchers, thru 6/12/26)"]}
+      ]
+    },
+    {
+      "id": "hughesnet", "name": "HughesNet", "type": "satellite",
+      "availability_by_address": {"30024": "available"},
+      "availability_summary": "available region-wide (GEO); pricing address-gated",
+      "source": "RESEARCH ESTIMATE — hughesnet.com fully address-gated, not checker-confirmed",
+      "plans": [
+        {"plan_name": "Select", "down_mbps": 50, "up_mbps": 5, "base_rate": 50, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "15 GB priority", "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "_flag": "estimate — needs checker"},
+        {"plan_name": "Elite", "down_mbps": 100, "up_mbps": 5, "base_rate": 70, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "50 GB priority", "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": [], "_flag": "estimate — needs checker"},
+        {"plan_name": "Fusion 100", "down_mbps": 100, "up_mbps": 5, "base_rate": 100, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "100 GB priority", "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": ["low-latency Fusion"], "_flag": "estimate — needs checker"},
+        {"plan_name": "Fusion 200", "down_mbps": 100, "up_mbps": 5, "base_rate": 170, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "200 GB priority", "contract": null, "equipment_fee": null, "price_lock_years": null, "perks": ["low-latency Fusion"], "_flag": "estimate — needs checker"}
+      ]
+    }
+  ]
+}
