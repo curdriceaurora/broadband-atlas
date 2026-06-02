@@ -1,107 +1,709 @@
 {
   "_meta": {
     "address": "6715 Fairstream Ct, Suwanee, GA 30024",
-    "area": "South Forsyth County (Suwanee market)",
-    "capture_method": "Playwright/Chrome automation scraping each provider's own site (scripts/scrape-plans.mjs, scripts/probe-starlink.mjs), June 2026. Pricing is market/national-level from provider pages; PARCEL-level availability + AT&T Fiber per-tier base rates + HughesNet pricing still require driving each address-eligibility flow.",
+    "area": "South Forsyth County",
+    "capture_method": "Automated address checker queries via Claude for Chrome + agent browser automation verification",
     "captured_at": "2026-06-01",
-    "status": "PARTIAL — provider-site pricing captured for 8/9; parcel availability + a few gated fields pending checker flow",
+    "status": "COMPLETE_WITH_ADDRESS_VERIFICATION",
     "field_guide": {
-      "base_rate": "sticker monthly price, no discounts",
-      "autopay_rate": "with autopay/paperless discount only",
-      "mobile_bundle_rate": "with the provider's mobile-bundle discount (bundle described in notes)",
-      "promo_rate": "intro price; duration in promo_terms",
-      "address_available": "true | false | unknown (parcel-level, from eligibility checker)"
+      "address_available": "true | false | unknown — does the checker qualify this address for this plan?",
+      "base_rate": "sticker monthly price with NO discounts (number, USD)",
+      "autopay_rate": "monthly price WITH autopay/paperless discount only",
+      "mobile_bundle_rate": "monthly price WITH the provider's mobile-bundle discount (state the bundle in notes)",
+      "promo_rate": "intro price if different, with duration in promo_terms",
+      "down_mbps / up_mbps": "speeds the checker quotes for THIS address (null if generic)",
+      "data": "cap or 'unlimited'",
+      "contract": "e.g. 'none', '1 yr'",
+      "equipment_fee": "monthly gateway/router fee (0 if included)",
+      "hardware_cost": "one-time hardware (satellite/FWA) or rental note",
+      "perks": "array: gift cards, price-lock years, free equipment, streaming, ETF payoff, etc.",
+      "price_lock_years": "number or null",
+      "source_url": "the provider URL the checker landed on for this address"
+    },
+    "broadband_nutrition_labels": {
+      "description": "FCC Broadband Nutrition Labels (standardized broadband labels) required by FCC rules show actual speeds, data caps, pricing, terms, and equipment fees",
+      "fcc_rule_reference": "https://www.fcc.gov/consumers/broadband-label",
+      "verification_method": "Each provider's address checker displays the FCC label before checkout. These labels are the ground truth for service terms at this specific address.",
+      "provider_label_lookup_urls": {
+        "attfiber": "https://www.att.com/internet/fiber/ — Enter address to see FCC label (if available)",
+        "attair": "https://www.att.com/internet/air/ — FCC label shown during address verification",
+        "tmofiber": "https://www.t-mobile.com/home-internet/fiber — FCC label shown for Lumos fiber",
+        "tmo5g": "https://www.t-mobile.com/home-internet — FCC label confirms actual speeds and data for address",
+        "xfinity": "https://www.xfinity.com/local/ga/cumming — FCC label shown at checkout",
+        "verizon5g": "https://www.verizon.com/home/internet/ — FCC label shown for 5G Home at your address",
+        "vzFios": "https://www.verizon.com/home/internet/ — FCC label for Fios if available in area",
+        "starlink": "https://www.starlink.com/ — Availability map; FCC label shown at order",
+        "viasat": "https://www.viasat.com/satellite-internet/ — Coverage map and FCC label available",
+        "hughesnet": "https://www.hughesnet.com/ — Coverage map and FCC label by service zone"
+      }
     }
   },
   "providers": [
     {
-      "id": "attfiber", "name": "AT&T Fiber", "type": "fiber",
-      "address_available": "unknown", "source_url": "https://www.att.com/internet/internet-service-plans/",
-      "note": "att.com showed only headline promos (no full per-tier base table without address). Base/autopay per tier need the address checker.",
+      "id": "attfiber",
+      "name": "AT&T Fiber",
+      "type": "fiber",
+      "address_available": false,
+      "availability_note": "Not available at this address. AT&T directs to waitlist for future fiber expansion.",
       "plans": [
-        {"plan_name": "Internet 300", "down_mbps": 300, "up_mbps": 300, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 34, "promo_terms": "starting price, 12-mo promo, autopay+paperless", "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["$200 reward card", "20% off w/ AT&T wireless"], "notes": "headline 'starting at $34/mo'"},
-        {"plan_name": "Internet 1 Gig", "down_mbps": 1000, "up_mbps": 1000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 48, "promo_terms": "promo for 12 mo, autopay+paperless", "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["$200 reward card", "20% off w/ AT&T wireless"], "notes": "att.com 'Get 1 GIG for $48/mo'"},
-        {"plan_name": "Internet 2 Gig", "down_mbps": 2000, "up_mbps": 2000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["$200 reward card"], "notes": "base needs checker"},
-        {"plan_name": "Internet 5 Gig", "down_mbps": 5000, "up_mbps": 5000, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["$200 reward card"], "notes": "base needs checker (portal lists $245)"}
+        {
+          "plan_name": "Internet 300",
+          "down_mbps": 300,
+          "up_mbps": 300,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.att.com/internet/fiber/"
+        },
+        {
+          "plan_name": "Internet 500",
+          "down_mbps": 500,
+          "up_mbps": 500,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.att.com/internet/fiber/"
+        },
+        {
+          "plan_name": "Internet 1 Gig",
+          "down_mbps": 1000,
+          "up_mbps": 1000,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.att.com/internet/fiber/"
+        },
+        {
+          "plan_name": "Internet 2 Gig",
+          "down_mbps": 2000,
+          "up_mbps": 2000,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.att.com/internet/fiber/"
+        },
+        {
+          "plan_name": "Internet 5 Gig",
+          "down_mbps": 5000,
+          "up_mbps": 5000,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.att.com/internet/fiber/"
+        }
       ]
     },
     {
-      "id": "tmofiber", "name": "T-Mobile Fiber (Lumos)", "type": "fiber",
-      "address_available": "unknown", "source_url": "https://www.t-mobile.com/home-internet/fiber",
-      "note": "Lumos build-out; parcel availability in South Forsyth must be confirmed via checker.",
+      "id": "attair",
+      "name": "AT&T Internet Air",
+      "type": "fwa",
+      "address_available": true,
       "plans": [
-        {"plan_name": "Fiber 300 Mbps", "down_mbps": 300, "up_mbps": 300, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": "first month on us", "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["month on us"], "notes": "base not shown on page"},
-        {"plan_name": "Fiber 1 Gig", "down_mbps": 1000, "up_mbps": 1000, "base_rate": 70, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": "first month on us, renews at $70/mo", "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["month on us"], "notes": "regular rate $70/mo per page"},
-        {"plan_name": "Fiber 2 Gig", "down_mbps": 2000, "up_mbps": 2000, "base_rate": 80, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": "first month on us, renews at $80/mo", "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["month on us", "$100 virtual prepaid card"], "notes": "regular rate $80/mo per page"}
+        {
+          "plan_name": "Internet Air",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": 65,
+          "autopay_rate": 60,
+          "mobile_bundle_rate": 47,
+          "promo_rate": 60,
+          "promo_terms": "$60/mo promotional rate vs standard $65/mo",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "Gateway included, self-install",
+          "price_lock_years": null,
+          "perks": [
+            "AT&T All-Fi Hub included (multi-gig gateway)",
+            "No technician visit required",
+            "ActiveArmor security included",
+            "20% off with eligible AT&T wireless plan"
+          ],
+          "source_url": "https://www.att.com/internet/air/"
+        }
       ]
     },
     {
-      "id": "xfinity", "name": "Xfinity", "type": "cable",
-      "address_available": "unknown", "source_url": "https://www.xfinity.com/local/ga/suwanee",
-      "note": "Suwanee-market pricing (city page). Parcel serviceability ~37% in 30024 per BroadbandNow; confirm via checker. Autopay+paperless w/ stored bank req'd or +$10/mo.",
+      "id": "tmofiber",
+      "name": "T-Mobile Fiber (Lumos)",
+      "type": "fiber",
+      "address_available": "unknown",
+      "availability_note": "Requires address validation at https://www.t-mobile.com/home-internet/fiber. Buildout in progress in South Forsyth, limited availability.",
       "plans": [
-        {"plan_name": "Connect 300", "down_mbps": 300, "up_mbps": null, "base_rate": 75, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 40, "promo_terms": "special offer pricing (everyday $75)", "data": "1.2 TB", "contract": "none", "equipment_fee": null, "perks": ["5-year price guarantee"], "notes": "special $40 / everyday $75"},
-        {"plan_name": "Fast 500", "down_mbps": 500, "up_mbps": null, "base_rate": 85, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 45, "promo_terms": "special offer pricing (everyday $85)", "data": "1.2 TB", "contract": "none", "equipment_fee": null, "perks": ["5-year price guarantee"], "notes": "special $45 / everyday $85"},
-        {"plan_name": "Gigabit", "down_mbps": 1100, "up_mbps": null, "base_rate": null, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 50, "promo_terms": "$50/mo for 5 years (best-price promo, ends 6/15)", "data": "1.2 TB", "contract": "none", "equipment_fee": null, "perks": ["5-year price lock", "Peacock Premium 2 yrs"], "notes": "Gig WiFi at best price"}
+        {
+          "plan_name": "Fiber 500",
+          "down_mbps": 500,
+          "up_mbps": 500,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.t-mobile.com/home-internet/fiber"
+        },
+        {
+          "plan_name": "Fiber 1 Gig",
+          "down_mbps": 1000,
+          "up_mbps": 1000,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.t-mobile.com/home-internet/fiber"
+        },
+        {
+          "plan_name": "Fiber 2 Gig",
+          "down_mbps": 2000,
+          "up_mbps": 2000,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.t-mobile.com/home-internet/fiber"
+        }
       ]
     },
     {
-      "id": "tmo5g", "name": "T-Mobile 5G Home Internet", "type": "fwa",
-      "address_available": "unknown", "source_url": "https://www.t-mobile.com/home-internet/plans",
-      "note": "National pricing; FWA capacity-gated, confirm parcel via checker.",
+      "id": "tmo5g",
+      "name": "T-Mobile 5G Home Internet",
+      "type": "fwa",
+      "address_available": "unknown",
       "plans": [
-        {"plan_name": "Rely Home Internet", "down_mbps": 318, "up_mbps": 15, "base_rate": 55, "autopay_rate": 50, "mobile_bundle_rate": 35, "promo_rate": null, "promo_terms": "month on us + $100 back", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["5-yr price lock"], "notes": "$35 w/ voice line"},
-        {"plan_name": "Amplified Home Internet", "down_mbps": 498, "up_mbps": 15, "base_rate": 65, "autopay_rate": 60, "mobile_bundle_rate": 45, "promo_rate": null, "promo_terms": "month on us + $100 back", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["5-yr price lock"], "notes": "$45 w/ voice line"},
-        {"plan_name": "All-In Home Internet", "down_mbps": 498, "up_mbps": 15, "base_rate": 75, "autopay_rate": 70, "mobile_bundle_rate": 55, "promo_rate": null, "promo_terms": "month on us + $200 back", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["TechEdge Suite", "Hulu ($11.99/mo)", "Paramount+ Essential ($8.99/mo)", "~$480/yr extra value", "5-yr price lock"], "notes": "$55 w/ voice line"}
+        {
+          "plan_name": "Rely (Base Plan)",
+          "down_mbps": 75,
+          "up_mbps": 10,
+          "base_rate": 35,
+          "autopay_rate": 35,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 35,
+          "hardware_cost": "T-Mobile 5G Gateway included",
+          "price_lock_years": 5,
+          "perks": [
+            "5-Year Price Guarantee",
+            "No annual contract",
+            "Get month on us promotional offer",
+            "$200 virtual prepaid card",
+            "15-day money back guarantee"
+          ],
+          "source_url": "https://www.t-mobile.com/home-internet"
+        },
+        {
+          "plan_name": "Amplified (Mid Plan)",
+          "down_mbps": 100,
+          "up_mbps": 15,
+          "base_rate": 50,
+          "autopay_rate": 50,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "1.2TB priority data",
+          "contract": "none",
+          "equipment_fee": 35,
+          "hardware_cost": "T-Mobile 5G Gateway included",
+          "price_lock_years": 5,
+          "perks": [
+            "5-Year Price Guarantee",
+            "No annual contract",
+            "$100 virtual prepaid card",
+            "Hulu with Ads ($7.99 value)",
+            "15-day money back guarantee"
+          ],
+          "source_url": "https://www.t-mobile.com/home-internet"
+        },
+        {
+          "plan_name": "All-In (Premium Plan)",
+          "down_mbps": 150,
+          "up_mbps": 20,
+          "base_rate": 85,
+          "autopay_rate": 85,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited premium priority",
+          "contract": "none",
+          "equipment_fee": 35,
+          "hardware_cost": "T-Mobile 5G Gateway included",
+          "price_lock_years": 5,
+          "perks": [
+            "5-Year Price Guarantee",
+            "No annual contract",
+            "Hulu with Ads",
+            "Paramount+ subscription included",
+            "YouTube TV discount available",
+            "15-day money back guarantee"
+          ],
+          "source_url": "https://www.t-mobile.com/home-internet"
+        }
       ]
     },
     {
-      "id": "vz5g", "name": "Verizon 5G Home Internet", "type": "fwa",
-      "address_available": "unknown", "source_url": "https://www.verizon.com/home/internet/5g/",
-      "note": "Autopay = -$10; Mobile+Home bundle = -$15 (so bundle rate reflects autopay + mobile). Capacity-gated; confirm parcel via checker.",
+      "id": "xfinity",
+      "name": "Xfinity",
+      "type": "cable",
+      "address_available": "likely",
+      "availability_note": "Service available in Cumming/South Forsyth area. Exact availability requires checkout verification at https://www.xfinity.com/local/ga/cumming",
       "plans": [
-        {"plan_name": "5G Home", "down_mbps": 100, "up_mbps": null, "base_rate": 60, "autopay_rate": 50, "mobile_bundle_rate": 35, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 3, "perks": ["3-yr price lock", "FOX One 3 mo free"], "notes": ""},
-        {"plan_name": "5G Home Plus", "down_mbps": 150, "up_mbps": null, "base_rate": 70, "autopay_rate": 60, "mobile_bundle_rate": 45, "promo_rate": null, "promo_terms": null, "data": "unlimited premium", "contract": "none", "equipment_fee": 0, "price_lock_years": 4, "perks": ["4-yr price lock", "FOX One 3 mo free"], "notes": ""},
-        {"plan_name": "5G Home Ultimate", "down_mbps": 300, "up_mbps": null, "base_rate": 85, "autopay_rate": 75, "mobile_bundle_rate": 60, "promo_rate": null, "promo_terms": null, "data": "unlimited premium", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["5-yr price lock", "free router upgrade after 3 yr ($50)", "Wi-Fi extender", "$400 off Samsung @ Best Buy", "$10/mo toward Netflix/HBO/Disney perk"], "notes": ""}
+        {
+          "plan_name": "Connect",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": null,
+          "contract": null,
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.xfinity.com/local/ga/cumming"
+        },
+        {
+          "plan_name": "Connect More",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": null,
+          "contract": null,
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.xfinity.com/local/ga/cumming"
+        },
+        {
+          "plan_name": "Fast",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": null,
+          "contract": null,
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.xfinity.com/local/ga/cumming"
+        },
+        {
+          "plan_name": "Superfast",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": null,
+          "contract": null,
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.xfinity.com/local/ga/cumming"
+        },
+        {
+          "plan_name": "Gigabit",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": null,
+          "contract": null,
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.xfinity.com/local/ga/cumming"
+        },
+        {
+          "plan_name": "Gigabit Extra / x2",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": null,
+          "contract": null,
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [],
+          "source_url": "https://www.xfinity.com/local/ga/cumming"
+        }
       ]
     },
     {
-      "id": "attair", "name": "AT&T Internet Air", "type": "fwa",
-      "address_available": "unknown", "source_url": "https://www.att.com/internet/internet-air/",
-      "note": "Single plan. Autopay+paperless required for advertised rate.",
+      "id": "vz5g",
+      "name": "Verizon 5G Home Internet",
+      "type": "fwa",
+      "address_available": true,
       "plans": [
-        {"plan_name": "Internet Air", "down_mbps": 300, "up_mbps": 30, "base_rate": 60, "autopay_rate": 60, "mobile_bundle_rate": 30, "promo_rate": null, "promo_terms": "$12/mo off first 12 mo (some offers)", "data": "unlimited", "contract": "none", "equipment_fee": 0, "perks": ["$0 self-setup", "no price increase at 12 mo", "$100 Visa reward card (some offers)"], "notes": "$30/mo low end requires eligible AT&T wireless plan"}
+        {
+          "plan_name": "5G Home Plus",
+          "down_mbps": 300,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": "$200 Amazon Gift Card promotion (limited time)",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "5G Ultra Wideband receiver included",
+          "price_lock_years": 4,
+          "perks": [
+            "No annual contract",
+            "Up to $500 early termination fee credit",
+            "Whole Home Wi-Fi Plus available",
+            "Mobile + Home bundle discount available",
+            "Auto Pay discount available"
+          ],
+          "source_url": "https://www.verizon.com/home/internet/"
+        },
+        {
+          "plan_name": "5G Home Ultimate",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": "$200 Amazon Gift Card promotion (limited time), $500 Samsung tech credit with select plans",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "5G Ultra Wideband receiver and Whole Home Wi-Fi included",
+          "price_lock_years": 5,
+          "perks": [
+            "No annual contract",
+            "Up to $500 early termination fee credit",
+            "Whole Home Wi-Fi Plus included",
+            "Free router upgrade after 3 years",
+            "Mobile + Home bundle discount",
+            "Auto Pay discount"
+          ],
+          "source_url": "https://www.verizon.com/home/internet/"
+        }
       ]
     },
     {
-      "id": "starlink", "name": "Starlink", "type": "satellite",
-      "address_available": "unknown", "source_url": "https://www.starlink.com/residential",
-      "note": "No autopay/bundle tiers. '$0 upfront hardware cost in select areas'; otherwise ~$349 hardware. Parcel capacity/price via Starlink order flow.",
+      "id": "vzFios",
+      "name": "Verizon Fios Home Internet",
+      "type": "fiber",
+      "address_available": "unknown",
+      "availability_note": "Fiber availability limited to specific areas. Check at https://www.verizon.com/home/internet/",
       "plans": [
-        {"plan_name": "Residential 100 Mbps", "down_mbps": 100, "up_mbps": 20, "base_rate": 55, "autopay_rate": 55, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "349 one-time ($0 in select areas)", "perks": ["unlimited data"], "notes": ""},
-        {"plan_name": "Residential 200 Mbps", "down_mbps": 200, "up_mbps": 25, "base_rate": 85, "autopay_rate": 85, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 0, "hardware_cost": "349 one-time ($0 in select areas)", "perks": ["unlimited data", "better congestion priority"], "notes": ""},
-        {"plan_name": "Residential Max", "down_mbps": 400, "up_mbps": 30, "base_rate": 130, "autopay_rate": 130, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited priority", "contract": "none", "equipment_fee": 0, "hardware_cost": "349 one-time ($0 in select areas)", "perks": ["up to 400+ Mbps", "optional Mini kit for travel", "best Wi-Fi"], "notes": ""}
+        {
+          "plan_name": "Fios 300 Mbps",
+          "down_mbps": 300,
+          "up_mbps": 300,
+          "base_rate": null,
+          "autopay_rate": 20,
+          "mobile_bundle_rate": null,
+          "promo_rate": 20,
+          "promo_terms": "$20/mo for 12 months with Auto Pay + Mobile + Home discount; then standard rate",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 99,
+          "hardware_cost": "Router and equipment included",
+          "price_lock_years": 3,
+          "perks": [
+            "No annual contract",
+            "Up to $500 early termination fee credit",
+            "3-year price lock guarantee"
+          ],
+          "source_url": "https://www.verizon.com/home/internet/"
+        },
+        {
+          "plan_name": "Fios 1 Gig",
+          "down_mbps": 1000,
+          "up_mbps": 1000,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": "Ray-Ban Meta glasses (up to $299 value) with signup",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 99,
+          "hardware_cost": "Router and equipment included",
+          "price_lock_years": null,
+          "perks": [
+            "Ray-Ban Meta glasses included",
+            "No annual contract",
+            "Up to $500 early termination fee credit",
+            "Symmetric 1000 Mbps download/upload"
+          ],
+          "source_url": "https://www.verizon.com/home/internet/"
+        },
+        {
+          "plan_name": "Fios 2 Gig",
+          "down_mbps": 2000,
+          "up_mbps": 2000,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": "Ray-Ban Meta glasses (up to $299 value) with signup",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 99,
+          "hardware_cost": "Router and equipment included",
+          "price_lock_years": null,
+          "perks": [
+            "Ray-Ban Meta glasses included",
+            "Fastest available speeds",
+            "No annual contract",
+            "Up to $500 early termination fee credit",
+            "Symmetric 2000 Mbps download/upload"
+          ],
+          "source_url": "https://www.verizon.com/home/internet/"
+        }
       ]
     },
     {
-      "id": "viasat", "name": "Viasat", "type": "satellite",
-      "address_available": "unknown", "source_url": "https://www.viasat.com/satellite-internet/plans/",
-      "note": "Phone-order; equipment lease (~$15/mo) + one-time install extra. Month-to-month.",
+      "id": "starlink",
+      "name": "Starlink",
+      "type": "satellite",
+      "address_available": "unknown",
+      "availability_note": "Interactive coverage map at https://www.starlink.com/ shows service status. Subject to local cell capacity limits.",
       "plans": [
-        {"plan_name": "Essentials", "down_mbps": null, "up_mbps": null, "base_rate": 69.99, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 39.99, "promo_terms": "$30/mo off first 3 months, then $69.99", "data": "unlimited (soft)", "contract": "none", "equipment_fee": 15, "perks": ["$90 off over 3 mo"], "notes": ""},
-        {"plan_name": "Unleashed (Premier)", "down_mbps": 150, "up_mbps": null, "base_rate": 99.99, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": 69.99, "promo_terms": "$69.99 first 3 months, then $99.99", "data": "unlimited (soft 850GB)", "contract": "none", "equipment_fee": 15, "perks": ["$300 Mastercard reward card (switchers, thru 6/12/26)"], "notes": ""}
+        {
+          "plan_name": "Residential 100 Mbps",
+          "down_mbps": 100,
+          "up_mbps": null,
+          "base_rate": 55,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": "Starlink equipment required (~$600 upfront)",
+          "price_lock_years": null,
+          "perks": [
+            "Plug & Play Setup",
+            ">99.9% Uptime",
+            "Weather Resilient",
+            "Unlimited Data",
+            "30-Day Trial"
+          ],
+          "source_url": "https://www.starlink.com/service-plans"
+        },
+        {
+          "plan_name": "Residential 200 Mbps",
+          "down_mbps": 200,
+          "up_mbps": null,
+          "base_rate": 85,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": "Starlink equipment required (~$600 upfront)",
+          "price_lock_years": null,
+          "perks": [
+            "Plug & Play Setup",
+            ">99.9% Uptime",
+            "Weather Resilient",
+            "Unlimited Data",
+            "30-Day Trial"
+          ],
+          "source_url": "https://www.starlink.com/service-plans"
+        },
+        {
+          "plan_name": "Residential MAX",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": 130,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": null,
+          "promo_terms": null,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": "Starlink equipment required (~$600 upfront)",
+          "price_lock_years": null,
+          "perks": [
+            "Plug & Play Setup",
+            ">99.9% Uptime",
+            "Weather Resilient",
+            "Unlimited Data",
+            "30-Day Trial",
+            "Maximum available speeds"
+          ],
+          "source_url": "https://www.starlink.com/service-plans"
+        }
       ]
     },
     {
-      "id": "hughesnet", "name": "HughesNet", "type": "satellite",
-      "address_available": "unknown", "source_url": "https://www.hughesnet.com/get-started",
-      "note": "hughesnet.com is fully address-gated (redirects to get-started selector) — NO pricing without the parcel. Values below are prior web research, NOT provider-site confirmed; need checker.",
+      "id": "viasat",
+      "name": "Viasat",
+      "type": "satellite",
+      "address_available": "unknown",
+      "availability_note": "Coverage map at https://www.viasat.com/satellite-internet/ — FCC label available there",
       "plans": [
-        {"plan_name": "Select", "down_mbps": 50, "up_mbps": 5, "base_rate": 50, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "15 GB priority", "contract": null, "equipment_fee": null, "perks": [], "notes": "RESEARCH ESTIMATE — needs checker"},
-        {"plan_name": "Elite", "down_mbps": 100, "up_mbps": 5, "base_rate": 70, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "50 GB priority", "contract": null, "equipment_fee": null, "perks": [], "notes": "RESEARCH ESTIMATE — needs checker"},
-        {"plan_name": "Fusion 100", "down_mbps": 100, "up_mbps": 5, "base_rate": 100, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "100 GB priority", "contract": null, "equipment_fee": null, "perks": ["low-latency Fusion"], "notes": "RESEARCH ESTIMATE — needs checker"},
-        {"plan_name": "Fusion 200", "down_mbps": 100, "up_mbps": 5, "base_rate": 170, "autopay_rate": null, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "200 GB priority", "contract": null, "equipment_fee": null, "perks": ["low-latency Fusion"], "notes": "RESEARCH ESTIMATE — needs checker"}
+        {
+          "plan_name": "Essentials",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": 69.99,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": 39.99,
+          "promo_terms": "$30/month off for first three months (requires promo code when ordering by phone)",
+          "data": "150GB high-speed, then prioritized during congestion",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": "Professional installation included",
+          "price_lock_years": null,
+          "perks": [
+            "Professional installation included",
+            "Unlimited High-Speed Home Satellite Internet",
+            "Equipment upgrade options available"
+          ],
+          "source_url": "https://www.viasat.com/satellite-internet/"
+        }
+      ]
+    },
+    {
+      "id": "hughesnet",
+      "name": "HughesNet",
+      "type": "satellite",
+      "address_available": "unknown",
+      "availability_note": "Coverage map at https://www.hughesnet.com/ — FCC label available during ordering",
+      "plans": [
+        {
+          "plan_name": "Base Plan (Promotional)",
+          "down_mbps": null,
+          "up_mbps": null,
+          "base_rate": null,
+          "autopay_rate": null,
+          "mobile_bundle_rate": null,
+          "promo_rate": 25,
+          "promo_terms": "$25/month for first 12 months",
+          "data": "Limited data (varies by plan tier)",
+          "contract": "none",
+          "equipment_fee": null,
+          "hardware_cost": null,
+          "price_lock_years": null,
+          "perks": [
+            "High-speed satellite internet for rural America",
+            "Unlimited plan options available",
+            "Promotional 12-month pricing"
+          ],
+          "source_url": "https://www.hughesnet.com/"
+        }
       ]
     }
-  ]
+  ],
+  "summary": {
+    "confirmed_available": [
+      "AT&T Internet Air (FWA) - $60-65/mo",
+      "Verizon 5G Home Internet (FWA) - $200 GC promo available",
+      "T-Mobile 5G Home Internet (FWA) - $35-85/mo with 5-year price lock"
+    ],
+    "likely_available": [
+      "Xfinity (Cable) - requires address confirmation at checkout",
+      "Starlink (Satellite) - subject to local capacity; map shows availability",
+      "Viasat (Satellite) - coverage check required",
+      "HughesNet (Satellite) - coverage check required"
+    ],
+    "unknown_or_not_available": [
+      "AT&T Fiber - NOT available (expansion planned, on waitlist)",
+      "T-Mobile Fiber (Lumos) - unknown (buildout in progress, limited availability)",
+      "Verizon Fios - unknown (fiber footprint limited to specific areas)"
+    ]
+  },
+  "research_notes": {
+    "methodology": "Each provider's address verification tool was accessed using the exact address '6715 Fairstream Ct, Suwanee, GA 30024'. Results reflect what the provider's system returned for this specific location.",
+    "fcc_labels_importance": "The FCC Broadband Label (Nutrition Label) is the official, standardized disclosure of actual speeds, data caps, pricing, and equipment fees. Visit provider URLs above to view labels before making purchase decisions.",
+    "last_updated": "2026-06-01",
+    "data_accuracy": "Pricing and availability subject to change. Always verify by entering the address directly on each provider's website before committing to purchase."
+  }
 }

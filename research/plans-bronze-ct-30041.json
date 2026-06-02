@@ -1,0 +1,35 @@
+{
+  "address": "2395 Bronze Ct, Cumming, GA 30041",
+  "zip_code": "30041",
+  "county": "Forsyth",
+  "state": "GA",
+  "last_updated": "2026-06-01",
+  "summary": {
+    "total_providers_checked": 1,
+    "fiber_available": false,
+    "fwa_available": true,
+    "satellite_available": "unknown"
+  },
+  "providers": [
+    {
+      "name": "T-Mobile Fiber",
+      "service_type": "Fiber",
+      "availability": "NOT_AVAILABLE",
+      "status": "buildout_ongoing",
+      "alternative_available": "T-Mobile 5G Home Internet",
+      "eligibility_status": "eligible_for_5g",
+      "address_verified": "2395 BRONZE CT, CUMMING, GA 30041",
+      "verification_url": "https://fiber.t-mobile.com/check-address",
+      "verification_date": "2026-06-01",
+      "fcc_label_url": "https://www.t-mobile.com/home-internet",
+      "plans": [],
+      "notes": "T-Mobile Fiber service is not yet available at this Cumming address. Address is eligible for T-Mobile 5G Home Internet (fixed wireless alternative). Fiber expansion is ongoing in the Forsyth County area."
+    }
+  ],
+  "research_notes": {
+    "methodology": "Direct address verification via T-Mobile Fiber official address checker",
+    "data_quality": "verified",
+    "last_checked_by": "automated_address_checker",
+    "coverage_map_status": "fiber_buildout_ongoing"
+  }
+}

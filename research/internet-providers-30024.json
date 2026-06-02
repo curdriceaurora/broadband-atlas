@@ -1,0 +1,378 @@
+[
+  {
+    "id": "tmobile_5g",
+    "name": "T-Mobile 5G Home Internet",
+    "type": "fwa",
+    "address_available": "unknown",
+    "plans": [
+      {
+        "plan_name": "Rely (Base Plan)",
+        "down_mbps": 75,
+        "up_mbps": 10,
+        "base_rate": 35,
+        "autopay_rate": 35,
+        "promo_rate": null,
+        "promo_terms": null,
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": 35,
+        "hardware_cost": "T-Mobile 5G Gateway included",
+        "price_lock_years": 5,
+        "perks": [
+          "5-Year Price Guarantee",
+          "No annual contract",
+          "Get month on us promotional offer",
+          "$200 virtual prepaid card",
+          "15-day money back guarantee"
+        ],
+        "source_url": "https://www.t-mobile.com/home-internet"
+      },
+      {
+        "plan_name": "Amplified (Mid Plan)",
+        "down_mbps": 100,
+        "up_mbps": 15,
+        "base_rate": 50,
+        "autopay_rate": 50,
+        "promo_rate": null,
+        "promo_terms": null,
+        "data": "1.2TB priority data",
+        "contract": "none",
+        "equipment_fee": 35,
+        "hardware_cost": "T-Mobile 5G Gateway included",
+        "price_lock_years": 5,
+        "perks": [
+          "5-Year Price Guarantee",
+          "No annual contract",
+          "$100 virtual prepaid card",
+          "Hulu with Ads ($7.99 value)",
+          "15-day money back guarantee"
+        ],
+        "source_url": "https://www.t-mobile.com/home-internet"
+      },
+      {
+        "plan_name": "All-In (Premium Plan)",
+        "down_mbps": 150,
+        "up_mbps": 20,
+        "base_rate": 85,
+        "autopay_rate": 85,
+        "promo_rate": null,
+        "promo_terms": null,
+        "data": "unlimited premium priority",
+        "contract": "none",
+        "equipment_fee": 35,
+        "hardware_cost": "T-Mobile 5G Gateway included",
+        "price_lock_years": 5,
+        "perks": [
+          "5-Year Price Guarantee",
+          "No annual contract",
+          "Hulu with Ads",
+          "Paramount+ subscription included",
+          "YouTube TV discount available",
+          "15-day money back guarantee"
+        ],
+        "source_url": "https://www.t-mobile.com/home-internet"
+      }
+    ]
+  },
+  {
+    "id": "tmobile_lumos_fiber",
+    "name": "T-Mobile Fiber (Lumos)",
+    "type": "fiber",
+    "address_available": "unknown",
+    "plans": [],
+    "note": "Lumos fiber availability at this address not checked - requires address validation on t-mobile.com/home-internet/fiber"
+  },
+  {
+    "id": "xfinity",
+    "name": "Xfinity",
+    "type": "cable",
+    "address_available": "likely_available",
+    "plans": [],
+    "note": "Service available in Cumming, GA area; exact pricing at address 6715 Fairstream Ct requires address lookup at xfinity.com"
+  },
+  {
+    "id": "verizon_5g_home",
+    "name": "Verizon 5G Home Internet",
+    "type": "fwa",
+    "address_available": true,
+    "plans": [
+      {
+        "plan_name": "5G Home Plus",
+        "down_mbps": 300,
+        "up_mbps": null,
+        "base_rate": null,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": "$200 Amazon Gift Card promotion (limited time)",
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": 0,
+        "hardware_cost": "5G Ultra Wideband receiver included",
+        "price_lock_years": null,
+        "perks": [
+          "No annual contract",
+          "Up to $500 early termination fee credit",
+          "Whole Home Wi-Fi Plus available",
+          "Mobile + Home bundle discount available",
+          "Auto Pay discount available"
+        ],
+        "source_url": "https://www.verizon.com/home/internet/"
+      },
+      {
+        "plan_name": "5G Home Ultimate",
+        "down_mbps": null,
+        "up_mbps": null,
+        "base_rate": null,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": "$200 Amazon Gift Card promotion (limited time), $500 Samsung tech credit with select plans",
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": 0,
+        "hardware_cost": "5G Ultra Wideband receiver and Whole Home Wi-Fi included",
+        "price_lock_years": null,
+        "perks": [
+          "No annual contract",
+          "Up to $500 early termination fee credit",
+          "Whole Home Wi-Fi Plus included",
+          "Free router upgrade after 3 years",
+          "Mobile + Home bundle discount",
+          "Auto Pay discount"
+        ],
+        "source_url": "https://www.verizon.com/home/internet/"
+      }
+    ]
+  },
+  {
+    "id": "verizon_fios",
+    "name": "Verizon Fios Home Internet",
+    "type": "fiber",
+    "address_available": "unknown",
+    "plans": [
+      {
+        "plan_name": "Fios 300 Mbps",
+        "down_mbps": 300,
+        "up_mbps": 300,
+        "base_rate": null,
+        "autopay_rate": 20,
+        "promo_rate": "$20/mo for 12 months with Auto Pay and Mobile + Home discount",
+        "promo_terms": "When you switch; Mobile + Home Discount and bonus discount for 3 years. Save up to $540 over 3 years. Requires Auto Pay with bank account.",
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": 99,
+        "hardware_cost": "Router and equipment included",
+        "price_lock_years": 3,
+        "perks": [
+          "Ray-Ban Meta glasses (up to $299 value) with Fios 1 Gig or 2 Gig",
+          "No annual contract",
+          "Up to $500 early termination fee credit",
+          "Multi-year price lock guarantee",
+          "All-in pricing with no hidden fees"
+        ],
+        "source_url": "https://www.verizon.com/home/internet/"
+      },
+      {
+        "plan_name": "Fios 1 Gig",
+        "down_mbps": 1000,
+        "up_mbps": 1000,
+        "base_rate": null,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": "Ray-Ban Meta glasses (up to $299 value)",
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": 99,
+        "hardware_cost": "Router and equipment included",
+        "price_lock_years": null,
+        "perks": [
+          "Ray-Ban Meta glasses included",
+          "No annual contract",
+          "Up to $500 early termination fee credit",
+          "Matching download/upload speeds"
+        ],
+        "source_url": "https://www.verizon.com/home/internet/"
+      },
+      {
+        "plan_name": "Fios 2 Gig",
+        "down_mbps": 2000,
+        "up_mbps": 2000,
+        "base_rate": null,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": "Ray-Ban Meta glasses (up to $299 value)",
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": 99,
+        "hardware_cost": "Router and equipment included",
+        "price_lock_years": null,
+        "perks": [
+          "Ray-Ban Meta glasses included",
+          "Fastest speeds available",
+          "No annual contract",
+          "Up to $500 early termination fee credit",
+          "Matching download/upload speeds"
+        ],
+        "source_url": "https://www.verizon.com/home/internet/"
+      }
+    ]
+  },
+  {
+    "id": "verizon_home_lite",
+    "name": "Verizon Home Internet Lite",
+    "type": "fwa",
+    "address_available": "unknown",
+    "plans": [
+      {
+        "plan_name": "Home Internet Lite Extra",
+        "down_mbps": null,
+        "up_mbps": null,
+        "base_rate": null,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": null,
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": 0,
+        "hardware_cost": "5G receiver and Whole Home Wi-Fi included",
+        "price_lock_years": null,
+        "perks": [
+          "Whole Home Wi-Fi Extra included",
+          "No annual contract",
+          "Wi-Fi Health Check feature"
+        ],
+        "source_url": "https://www.verizon.com/home/internet/"
+      }
+    ]
+  },
+  {
+    "id": "starlink",
+    "name": "Starlink",
+    "type": "satellite",
+    "address_available": "unknown",
+    "plans": [
+      {
+        "plan_name": "Residential 100 Mbps",
+        "down_mbps": 100,
+        "up_mbps": null,
+        "base_rate": 55,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": null,
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": null,
+        "hardware_cost": "Starlink equipment required",
+        "price_lock_years": null,
+        "perks": [
+          "Plug & Play Setup",
+          ">99.9% Uptime",
+          "Weather Resilient",
+          "Unlimited Data",
+          "30-Day Trial"
+        ],
+        "source_url": "https://www.starlink.com/service-plans"
+      },
+      {
+        "plan_name": "Residential 200 Mbps",
+        "down_mbps": 200,
+        "up_mbps": null,
+        "base_rate": 85,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": null,
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": null,
+        "hardware_cost": "Starlink equipment required",
+        "price_lock_years": null,
+        "perks": [
+          "Plug & Play Setup",
+          ">99.9% Uptime",
+          "Weather Resilient",
+          "Unlimited Data",
+          "30-Day Trial"
+        ],
+        "source_url": "https://www.starlink.com/service-plans"
+      },
+      {
+        "plan_name": "Residential MAX",
+        "down_mbps": null,
+        "up_mbps": null,
+        "base_rate": 130,
+        "autopay_rate": null,
+        "promo_rate": null,
+        "promo_terms": null,
+        "data": "unlimited",
+        "contract": "none",
+        "equipment_fee": null,
+        "hardware_cost": "Starlink equipment required - maximum available speeds",
+        "price_lock_years": null,
+        "perks": [
+          "Plug & Play Setup",
+          ">99.9% Uptime",
+          "Weather Resilient",
+          "Unlimited Data",
+          "30-Day Trial",
+          "Maximum available speeds"
+        ],
+        "source_url": "https://www.starlink.com/service-plans"
+      }
+    ]
+  },
+  {
+    "id": "viasat",
+    "name": "Viasat",
+    "type": "satellite",
+    "address_available": "unknown",
+    "plans": [
+      {
+        "plan_name": "Essentials",
+        "down_mbps": null,
+        "up_mbps": null,
+        "base_rate": 69.99,
+        "autopay_rate": null,
+        "promo_rate": 39.99,
+        "promo_terms": "$30/month off for first three months; must mention offer when ordering by phone",
+        "data": "150GB high-speed, then prioritized behind other users during congestion",
+        "contract": "none",
+        "equipment_fee": null,
+        "hardware_cost": "Professional installation included",
+        "price_lock_years": null,
+        "perks": [
+          "Professional installation included",
+          "Unlimited High-Speed Home Satellite Internet",
+          "Promotional pricing available"
+        ],
+        "source_url": "https://www.viasat.com/satellite-internet/"
+      }
+    ]
+  },
+  {
+    "id": "hughesnet",
+    "name": "HughesNet",
+    "type": "satellite",
+    "address_available": "unknown",
+    "plans": [
+      {
+        "plan_name": "Base Plan (Promotional)",
+        "down_mbps": null,
+        "up_mbps": null,
+        "base_rate": null,
+        "autopay_rate": null,
+        "promo_rate": 25,
+        "promo_terms": "$25/month for first 12 months",
+        "data": "Limited data",
+        "contract": "none",
+        "equipment_fee": null,
+        "hardware_cost": null,
+        "price_lock_years": null,
+        "perks": [
+          "High-speed satellite internet for rural America",
+          "Unlimited plan available",
+          "Promotional 12-month pricing"
+        ],
+        "source_url": "https://www.hughesnet.com/"
+      }
+    ]
+  }
+]

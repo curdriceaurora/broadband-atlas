@@ -1,0 +1,345 @@
+{
+  "address": "6715 Fairfield Trce, Suwanee, GA 30024",
+  "zip_code": "30024",
+  "county": "Forsyth",
+  "state": "GA",
+  "last_updated": "2026-06-01",
+  "summary": {
+    "total_providers_checked": 4,
+    "fiber_available": true,
+    "fiber_status": "pre_order_eligible",
+    "cable_available": true,
+    "fwa_available": true,
+    "fwa_providers": 2,
+    "satellite_available": "unknown"
+  },
+  "providers": [
+    {
+      "name": "T-Mobile Fiber",
+      "service_type": "Fiber",
+      "availability": "PRE_ORDER_ELIGIBLE",
+      "status": "buildout_in_progress",
+      "address_verified": "6715 FAIRFIELD TRCE, SUWANEE, GA 30024",
+      "verification_url": "https://fiber.t-mobile.com/check-address",
+      "verification_date": "2026-06-01",
+      "fcc_label_url": "https://www.t-mobile.com/home-internet/fiber",
+      "plans": [
+        {
+          "plan_name": "Fiber 300",
+          "speed_tier": "300 Mbps",
+          "promotional_price": "$35/month",
+          "regular_price": "$55/month",
+          "promotional_discount": "$20/month",
+          "equipment_fee": "$0",
+          "includes": [
+            "Wi-Fi router included",
+            "Installation included",
+            "Unlimited data",
+            "Symmetrical upload and download speeds up to 300 megabit per second"
+          ],
+          "promotions": [
+            "$10 discount when you sign up with AutoPay",
+            "Save $10/mo on select T-Fiber Plans"
+          ],
+          "contract_term": "No contract"
+        },
+        {
+          "plan_name": "Fiber 1 Gig",
+          "speed_tier": "1 Gigabit",
+          "promotional_price": "$50/month",
+          "regular_price": "$70/month",
+          "promotional_discount": "$20/month",
+          "equipment_fee": "$0",
+          "includes": [
+            "Mesh Wi-Fi extender",
+            "Wi-Fi router included",
+            "Installation included",
+            "Unlimited data",
+            "Symmetrical upload and download speeds up to 1 gigabit per second"
+          ],
+          "promotions": [
+            "$10 discount when you sign up with AutoPay",
+            "Get One Month Free of Fiber!",
+            "Save $10/mo on select T-Fiber Plans"
+          ],
+          "contract_term": "No contract"
+        }
+      ],
+      "notes": "T-Mobile Fiber available for pre-order at this address. Two tiers offered with significant promotional discounts. Address is eligible for immediate pre-order with service deployment pending."
+    },
+    {
+      "name": "Xfinity (Comcast Cable)",
+      "service_type": "Cable",
+      "availability": "AVAILABLE",
+      "status": "active_service",
+      "address_verified": "6715 FAIRFIELD TRCE, SUWANEE, GA 30024",
+      "verification_url": "https://www.xfinity.com/",
+      "verification_date": "2026-06-01",
+      "fcc_label_url": "https://www.xfinity.com/local/ga/suwanee",
+      "plans": [
+        {
+          "plan_name": "Internet 300",
+          "speed_tier": "300 Mbps",
+          "promotional_price": "$40/month",
+          "regular_price": "$50/month",
+          "equipment_fee": "included",
+          "fcc_label": {
+            "monthly_price": "$50/mo",
+            "data_included": "Unlimited",
+            "installation_fees": {
+              "getting_started_kit": "$0",
+              "self_installation_plus": "$39.99",
+              "professional_install": "$100"
+            },
+            "late_payment_fee": "$13",
+            "price_guarantee": "5-year, no term contract",
+            "includes_wifi_gateway": true,
+            "includes_xfinity_hotspots": true,
+            "autopay_discount": "up to $10/mo"
+          },
+          "includes": [
+            "300 Mbps download speeds",
+            "Unlimited data",
+            "WiFi Gateway included",
+            "Access to Xfinity WiFi hotspots",
+            "Equipment included"
+          ],
+          "contract_term": "No contract, 5-year price guarantee"
+        },
+        {
+          "plan_name": "Internet 500",
+          "speed_tier": "500 Mbps",
+          "promotional_price": "$45/month",
+          "regular_price": "$55/month",
+          "equipment_fee": "included",
+          "fcc_label": {
+            "monthly_price": "$55/mo",
+            "typical_download_speed": "586 Mbps",
+            "typical_upload_speed": "117 Mbps",
+            "typical_latency": "14 Milliseconds",
+            "data_included": "Unlimited",
+            "installation_fees": {
+              "getting_started_kit": "$0",
+              "self_installation_plus": "$39.99",
+              "professional_install": "$100"
+            },
+            "late_payment_fee": "$13",
+            "price_guarantee": "5-year, no term contract",
+            "includes_wifi_gateway": true,
+            "includes_xfinity_hotspots": true,
+            "autopay_discount": "up to $10/mo"
+          },
+          "includes": [
+            "500 Mbps download speeds",
+            "Typical speeds 586 Mbps down / 117 Mbps up",
+            "Unlimited data",
+            "WiFi Gateway included",
+            "Access to Xfinity WiFi hotspots",
+            "Equipment included"
+          ],
+          "contract_term": "No contract, 5-year price guarantee"
+        },
+        {
+          "plan_name": "Internet 1 Gig",
+          "speed_tier": "1 Gigabit",
+          "promotional_price": "$50/month",
+          "regular_price": "$60/month",
+          "equipment_fee": "included",
+          "fcc_label": {
+            "monthly_price": "$60/mo",
+            "typical_download_speed": "1170 Mbps",
+            "typical_upload_speed": "117 Mbps",
+            "typical_latency": "14 Milliseconds",
+            "data_included": "Unlimited",
+            "installation_fees": {
+              "getting_started_kit": "$0",
+              "self_installation_plus": "$39.99",
+              "professional_install": "$100"
+            },
+            "late_payment_fee": "$13",
+            "price_guarantee": "5-year, no term contract",
+            "includes_wifi_gateway": true,
+            "includes_xfinity_hotspots": true,
+            "autopay_discount": "up to $10/mo"
+          },
+          "includes": [
+            "1 Gigabit download speeds",
+            "Typical speeds 1170 Mbps down / 117 Mbps up",
+            "Unlimited data",
+            "WiFi Gateway included",
+            "Access to Xfinity WiFi hotspots",
+            "Equipment included",
+            "Premium included for 1 year ($10.99/mo value)"
+          ],
+          "contract_term": "No contract, 5-year price guarantee"
+        },
+        {
+          "plan_name": "Internet 2 Gig",
+          "speed_tier": "2 Gigabit",
+          "promotional_price": "$100/month",
+          "regular_price": "$110/month",
+          "equipment_fee": "included",
+          "fcc_label": {
+            "monthly_price": "$110/mo",
+            "typical_download_speed": "2278 Mbps",
+            "typical_upload_speed": "293 Mbps",
+            "typical_latency": "13 Milliseconds",
+            "data_included": "Unlimited",
+            "installation_fees": {
+              "getting_started_kit": "$0",
+              "self_installation_plus": "$39.99",
+              "professional_install": "$100"
+            },
+            "late_payment_fee": "$13",
+            "price_guarantee": "5-year, no term contract",
+            "includes_wifi_gateway": true,
+            "includes_xfinity_hotspots": true,
+            "autopay_discount": "up to $10/mo"
+          },
+          "includes": [
+            "2 Gigabit download speeds",
+            "Typical speeds 2278 Mbps down / 293 Mbps up",
+            "Unlimited data",
+            "WiFi Gateway included",
+            "Access to Xfinity WiFi hotspots",
+            "Equipment included",
+            "Premium included for 1 year ($10.99/mo value)"
+          ],
+          "contract_term": "No contract, 5-year price guarantee"
+        }
+      ],
+      "notes": "Xfinity cable internet available at this address with four speed tiers. Promotional pricing shown for first year; regular rates apply after promotion expires. Same-day delivery available for qualifying customers."
+    },
+    {
+      "name": "Verizon 5G Home Internet",
+      "service_type": "Fixed Wireless Access (5G)",
+      "availability": "AVAILABLE",
+      "status": "active_service",
+      "address_verified": "6715 FAIRFIELD TRCE, SUWANEE, GA 30024",
+      "verification_url": "https://www.verizon.com/home/internet/",
+      "verification_date": "2026-06-01",
+      "fcc_label_url": "https://www.verizon.com/home/internet/",
+      "plans": [
+        {
+          "plan_name": "5G Home",
+          "speed_tier": "Up to 100 Mbps",
+          "typical_speeds": "varied",
+          "price": "$60/month",
+          "equipment_fee": "included",
+          "includes": [
+            "Up to 100 Mbps download speeds",
+            "Unlimited data",
+            "Router included",
+            "All pricing, no hidden taxes and fees",
+            "30-Day Money-Back Guarantee",
+            "No annual contract"
+          ],
+          "contract_term": "No contract"
+        },
+        {
+          "plan_name": "5G Home Plus",
+          "speed_tier": "Up to 150 Mbps",
+          "typical_speeds": "60-100 Mbps",
+          "price": "$70/month",
+          "equipment_fee": "included",
+          "includes": [
+            "Up to 150 Mbps download speeds",
+            "Typical speeds of 60-100 Mbps",
+            "Unlimited premium data",
+            "1080p HD video streaming",
+            "Router included",
+            "All pricing, no hidden taxes and fees",
+            "30-Day Money-Back Guarantee",
+            "No annual contract"
+          ],
+          "contract_term": "No contract"
+        },
+        {
+          "plan_name": "5G Home Ultimate",
+          "speed_tier": "Up to 300 Mbps",
+          "typical_speeds": "85-250 Mbps",
+          "price": "$85/month",
+          "equipment_fee": "included",
+          "includes": [
+            "Up to 300 Mbps download speeds",
+            "Typical speeds of 85-250 Mbps",
+            "Unlimited premium data",
+            "Ultra HD 4K video streaming",
+            "Router included",
+            "All pricing, no hidden taxes and fees",
+            "30-Day Money-Back Guarantee",
+            "No annual contract"
+          ],
+          "contract_term": "No contract"
+        }
+      ],
+      "notes": "Verizon 5G Home Internet available at this address with three speed tiers. Fixed wireless service delivered via 5G network. All plans include router and feature 30-day money-back guarantee with no annual contract requirement."
+    },
+    {
+      "name": "T-Mobile 5G Home Internet",
+      "service_type": "Fixed Wireless Access (5G)",
+      "availability": "AVAILABLE",
+      "status": "active_service",
+      "address_verified": "6715 FAIRFIELD TRCE, SUWANEE, GA 30024",
+      "verification_url": "https://www.t-mobile.com/home-internet",
+      "verification_date": "2026-06-01",
+      "fcc_label_url": "https://www.t-mobile.com/home-internet",
+      "plans": [
+        {
+          "plan_name": "5G Home",
+          "speed_tier": "Typical speeds vary",
+          "price": "$50/month",
+          "equipment_fee": "included",
+          "includes": [
+            "5G Home Internet service",
+            "Gateway/router included",
+            "Unlimited data",
+            "No annual contract"
+          ],
+          "contract_term": "No contract"
+        },
+        {
+          "plan_name": "5G Home Plus",
+          "speed_tier": "Enhanced performance",
+          "price": "$60/month",
+          "equipment_fee": "included",
+          "includes": [
+            "5G Home Internet service",
+            "Gateway/router included",
+            "Unlimited data",
+            "Enhanced speeds",
+            "No annual contract"
+          ],
+          "contract_term": "No contract"
+        },
+        {
+          "plan_name": "5G Home Ultra",
+          "speed_tier": "Maximum performance",
+          "price": "$70/month",
+          "equipment_fee": "included",
+          "includes": [
+            "5G Home Internet service",
+            "Gateway/router included",
+            "Unlimited data",
+            "Maximum available speeds",
+            "No annual contract"
+          ],
+          "contract_term": "No contract"
+        }
+      ],
+      "notes": "T-Mobile 5G Home Internet available at this address with three performance tiers. Fixed wireless service delivered via 5G network. All plans include gateway and feature unlimited data with no annual contracts."
+    }
+  ],
+  "research_notes": {
+    "methodology": "Multi-provider address verification: T-Mobile Fiber pre-order page, Xfinity address availability checker, Verizon 5G Home Internet availability, T-Mobile 5G Home Internet availability",
+    "data_quality": "verified",
+    "last_checked_by": "user_verification",
+    "coverage_map_status": "fiber_buildout_active, cable_available, dual_5g_fwa_available",
+    "address_note": "6715 Fairfield Trce is a different address from 6715 Fairstream Ct in same ZIP code",
+    "providers_found": 4,
+    "fiber_pre_order_eligible": true,
+    "cable_available": true,
+    "fwa_providers_available": 2,
+    "fwa_options": ["Verizon 5G Home", "T-Mobile 5G Home"]
+  }
+}

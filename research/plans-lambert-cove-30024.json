@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "address": "610 Lambert Cove Trl, Suwanee, GA 30024",
+    "area": "South Forsyth County (Suwanee)",
+    "capture_method": "AT&T address verification via Chrome automation",
+    "captured_at": "2026-06-01",
+    "status": "AT&T FIBER CONFIRMED AVAILABLE - INCLUDES 5 GIG PLAN",
+    "summary": "AT&T Fiber IS available at this address with 5 speed tiers including rare 5 GIG option (300 Mbps - 5 Gig)"
+  },
+  "providers": [
+    {
+      "id": "attfiber",
+      "name": "AT&T Fiber",
+      "type": "fiber",
+      "address_available": true,
+      "availability_confirmed": "Yes - confirmed via address checker",
+      "plans": [
+        {
+          "plan_name": "Internet 300",
+          "down_mbps": 300,
+          "up_mbps": 300,
+          "base_rate": 40,
+          "standard_rate": 65,
+          "discounted_rate": 27,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "Wi-Fi 6 gateway included",
+          "perks": [
+            "Wi-Fi 6 gateway included",
+            "Internet security included",
+            "Free self-setup kit",
+            "Upload and download speeds",
+            "Game, stream, and video chat with confidence"
+          ],
+          "source_url": "https://www.att.com/internet/fiber/",
+          "fcc_label_available": true
+        },
+        {
+          "plan_name": "Internet 500",
+          "down_mbps": 500,
+          "up_mbps": 500,
+          "base_rate": 50,
+          "standard_rate": 75,
+          "discounted_rate": 35,
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "Wi-Fi 6 gateway included",
+          "perks": [
+            "Wi-Fi 6 gateway included",
+            "Internet security included",
+            "Free self-setup kit",
+            "Level up your gaming with low lag",
+            "Upload and download speeds"
+          ],
+          "source_url": "https://www.att.com/internet/fiber/",
+          "fcc_label_available": true
+        },
+        {
+          "plan_name": "Internet 1000 (1 GIG)",
+          "down_mbps": 1000,
+          "up_mbps": 1000,
+          "base_rate": 48,
+          "standard_rate": 90,
+          "discounted_rate": 30,
+          "promotional_offer": "$200 reward card when you order online",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "Wi-Fi 6 gateway included",
+          "perks": [
+            "Wi-Fi 6 gateway included",
+            "Internet security included",
+            "Free self-setup kit",
+            "$200 reward card (online order)",
+            "The speed to succeed for work and pro-level gaming"
+          ],
+          "source_url": "https://www.att.com/internet/fiber/",
+          "fcc_label_available": true
+        },
+        {
+          "plan_name": "Internet 2000 (2 GIG)",
+          "down_mbps": 2000,
+          "up_mbps": 2000,
+          "base_rate": 93,
+          "standard_rate": 155,
+          "discounted_rate": 62,
+          "promotional_offer": "$200 reward card (when ordering 2 GIG or 5 GIG speeds)",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "Wi-Fi 6 gateway included",
+          "perks": [
+            "Wi-Fi 6 gateway included",
+            "Internet security included",
+            "Free self-setup kit",
+            "$200 reward card",
+            "Power next-gen learning and smart home tech"
+          ],
+          "source_url": "https://www.att.com/internet/fiber/",
+          "fcc_label_available": true
+        },
+        {
+          "plan_name": "Internet 5000 (5 GIG) - PREMIUM",
+          "down_mbps": 5000,
+          "up_mbps": 5000,
+          "base_rate": 123,
+          "standard_rate": 255,
+          "discounted_rate": 72,
+          "promotional_offer": "$200 reward card (when ordering 2 GIG or 5 GIG speeds)",
+          "data": "unlimited",
+          "contract": "none",
+          "equipment_fee": 0,
+          "hardware_cost": "Wi-Fi 6 gateway included",
+          "max_wired_speed": "4.7 Gbps (single device maximum wired speed)",
+          "perks": [
+            "Wi-Fi 6 gateway included",
+            "Internet security included",
+            "Free self-setup kit",
+            "$200 reward card",
+            "Experience cutting-edge technologies beyond the internet",
+            "Maximum available speed tier",
+            "Single device wired speed maximum 4.7Gbps"
+          ],
+          "source_url": "https://www.att.com/internet/fiber/",
+          "fcc_label_available": true,
+          "rarity_note": "5 GIG tier is one of the highest-speed consumer fiber offerings available"
+        }
+      ]
+    }
+  ],
+  "key_findings": {
+    "fiber_available": true,
+    "highest_tier": "5 GIG at $72/mo (discounted)",
+    "best_value": "Internet 500 at $35/mo (discounted)",
+    "all_include": [
+      "No data caps",
+      "No annual contract",
+      "No equipment fees",
+      "Wi-Fi 6 gateway",
+      "Internet security",
+      "Free self-setup"
+    ],
+    "special_note": "This address has access to the rare 5 GIG plan, which is AT&T's highest-tier consumer fiber offering"
+  },
+  "comparison_notes": {
+    "vs_fairstream_suwanee": "Unlike 6715 Fairstream Ct (no fiber available), this location has full AT&T Fiber service",
+    "vs_cumming_address": "Similar to 672 Bell Creek Rd in Cumming, but this address uniquely offers the 5 GIG tier"
+  }
+}
