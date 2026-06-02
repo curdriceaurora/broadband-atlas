@@ -63,11 +63,11 @@
       "id": "tmo5g", "name": "T-Mobile 5G Home Internet", "type": "fwa",
       "availability_by_address": {"30024": "unknown (capacity-gated)"},
       "availability_summary": "~71-85% mid-band coverage; capacity-gated per address",
-      "source": "plans-30024.json + internet-providers-30024.json (agree)",
+      "source": "t-mobile.com/home-internet/plans (pricing) + Fairfield Trce capture (confirms gateway INCLUDED, unlimited, no contract). Supersedes earlier capture that listed a $35 equipment fee and 75/100/150 speeds.",
       "plans": [
-        {"plan_name": "Rely (Base)", "down_mbps": 75, "up_mbps": 10, "base_rate": 35, "autopay_rate": 35, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 35, "price_lock_years": 5, "perks": ["5-yr price guarantee"], "_flag": "equipment_fee $35 unusual — verify"},
-        {"plan_name": "Amplified (Mid)", "down_mbps": 100, "up_mbps": 15, "base_rate": 50, "autopay_rate": 50, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 35, "price_lock_years": 5, "perks": ["5-yr price guarantee"]},
-        {"plan_name": "All-In (Premium)", "down_mbps": 150, "up_mbps": 20, "base_rate": 85, "autopay_rate": 85, "mobile_bundle_rate": null, "promo_rate": null, "promo_terms": null, "data": "unlimited", "contract": "none", "equipment_fee": 35, "price_lock_years": 5, "perks": ["5-yr price guarantee"]}
+        {"plan_name": "Rely Home Internet", "down_mbps": 318, "up_mbps": 15, "base_rate": 55, "autopay_rate": 50, "mobile_bundle_rate": 35, "promo_rate": null, "promo_terms": "month on us + $100 back", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["gateway included", "5-yr price lock", "$35 w/ voice line"]},
+        {"plan_name": "Amplified Home Internet", "down_mbps": 498, "up_mbps": 15, "base_rate": 65, "autopay_rate": 60, "mobile_bundle_rate": 45, "promo_rate": null, "promo_terms": "month on us + $100 back", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["gateway included", "5-yr price lock", "$45 w/ voice line"]},
+        {"plan_name": "All-In Home Internet", "down_mbps": 498, "up_mbps": 15, "base_rate": 75, "autopay_rate": 70, "mobile_bundle_rate": 55, "promo_rate": null, "promo_terms": "month on us + $200 back", "data": "unlimited", "contract": "none", "equipment_fee": 0, "price_lock_years": 5, "perks": ["gateway included", "5-yr price lock", "TechEdge Suite", "Hulu + Paramount+", "~$480/yr value", "$55 w/ voice line"]}
       ]
     },
     {
